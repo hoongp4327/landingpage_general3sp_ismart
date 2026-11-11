@@ -659,3 +659,26 @@ html:not(.anim) .route-sec *, html:not(.anim) .route-sec *::after { animation: n
 }
 /* Tiêu đề SVG ở hero nhỏ hơn ~15% (600px → 510px) để không lấn ảnh minh họa */
 .ht { max-width: 510px; }
+
+/* =========================================================
+   v9 – TIÊU ĐỀ PHẦN CHƯƠNG TRÌNH DẠNG SVG (Asset 2)
+   ========================================================= */
+.section-title--svg { margin-top: 14px; line-height: 1; }
+.pt { display: block; width: 100%; max-width: 680px; height: auto; overflow: visible; }
+.pt text { white-space: pre; }
+.pt-sans { fill: #000C60; font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif; font-size: 89.99px; font-weight: 700; }
+.pt-serif { font-family: 'SVN-Book Antiqua', 'Book Antiqua', 'Lora', 'Palatino Linotype', Palatino, Georgia, serif; font-size: 100px; font-style: italic; font-weight: 700; }
+.pt-serif--orange { fill: #FF7900; }
+.pt-serif--blue { fill: #0080FF; }
+.pt-ring { fill: none; stroke: #FF7900; stroke-width: 2px; stroke-miterlimit: 10; }
+.pt-spark--blue { fill: #0080FF; }
+.pt-spark--orange { fill: #FF7900; }
+.pt-spark { transform-box: fill-box; transform-origin: center; }
+
+/* Khi cuộn tới: vòng elip tự vẽ quanh "Phù hợp", ngôi sao lấp lánh */
+html.anim.js-reveal .reveal .pt-ring { stroke-dasharray: 1; stroke-dashoffset: 1; }
+html.anim .reveal.is-in .pt-ring { animation: ptRing 1.4s var(--ease) .35s forwards; }
+html.anim .reveal.is-in .pt-spark { animation: htSpark 2.8s ease-in-out 1.2s infinite; }
+html.anim .reveal.is-in .pt-spark--orange { animation-delay: 2.1s; }
+@keyframes ptRing { to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) { .pt-ring { stroke-dasharray: none !important; stroke-dashoffset: 0 !important; } }
