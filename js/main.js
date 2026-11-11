@@ -375,3 +375,49 @@
     }).observe(v);
   }
 })();
+
+/* Video nền các section: chỉ tải và phát khi cuộn tới, dừng khi cuộn qua */
+(function () {
+  'use strict';
+  var vids = Array.prototype.slice.call(document.querySelectorAll('video[data-bg-video]'));
+  if (!vids.length) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var play = function (v) { var p = v.play(); if (p && p.catch) p.catch(function () {}); };
+  if (!('IntersectionObserver' in window)) { vids.forEach(play); return; }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      var v = e.target;
+      if (e.isIntersecting) { if (v.preload === 'none') { v.preload = 'auto'; } play(v); }
+      else if (!v.paused) v.pause();
+    });
+  }, { rootMargin: '200px 0px' });
+  vids.forEach(function (v) { io.observe(v); });
+})();
+
+/* Dự phòng: kiểm tra video nền theo sự kiện cuộn (phòng khi IntersectionObserver bị trì hoãn) */
+(function () {
+  'use strict';
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var vids = Array.prototype.slice.call(document.querySelectorAll('video[data-bg-video], #hero-video'));
+  if (!vids.length) return;
+  var timer = null;
+  function check() {
+    timer = null;
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    vids.forEach(function (v) {
+      var box = (v.parentElement || v).getBoundingClientRect();
+      var near = box.bottom > -200 && box.top < vh + 200;
+      if (near && v.paused) {
+        if (v.preload === 'none') v.preload = 'auto';
+        var p = v.play(); if (p && p.catch) p.catch(function () {});
+      } else if (!near && !v.paused) {
+        v.pause();
+      }
+    });
+  }
+  function schedule() { if (!timer) timer = setTimeout(check, 150); }
+  window.addEventListener('scroll', schedule, { passive: true });
+  window.addEventListener('resize', schedule);
+  document.addEventListener('visibilitychange', schedule);
+  check();
+})();

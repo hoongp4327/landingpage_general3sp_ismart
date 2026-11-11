@@ -689,3 +689,14 @@ html.anim .reveal.is-in .pt-spark--orange { animation-delay: 2.1s; }
   .js-panels #card-ipass .prog-card__media img { object-position: 52% 18%; }
 }
 @media (min-width: 1180px) { .js-panels #card-iglobal .prog-card__media img { object-position: 46% 18%; } }
+
+/* =========================================================
+   v10 – NỀN VIDEO CHO SECTION "YOUR LEARNING JOURNEY"
+   ========================================================= */
+.section--programs { background: #F1F2FD url("../assets/img/journey-bg-poster.webp") center / cover no-repeat; }
+.sec-video { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+.sec-video__el { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+/* Phủ trắng rất nhẹ để chữ navy luôn rõ trên các dải màu */
+.sec-video::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(255, 255, 255, .35) 0%, rgba(255, 255, 255, .1) 40%, rgba(255, 255, 255, .25) 100%); }
+.section--programs .deco { z-index: 2; }
+@media (prefers-reduced-motion: reduce) { .sec-video__el { display: none; } }
