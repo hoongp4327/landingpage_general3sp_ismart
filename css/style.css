@@ -80,8 +80,11 @@ button { font: inherit; cursor: pointer; }
 /* =========================================================
    1. HEADER
    ========================================================= */
-.site-header { position: fixed; inset: 0 0 auto 0; z-index: 100; color: var(--white); transition: background-color .25s ease, box-shadow .25s ease; }
-.site-header.is-scrolled, .menu-open .site-header { background: rgba(11, 29, 77, .86); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 6px 24px rgba(4, 12, 36, .28); }
+.site-header { position: fixed; inset: 0 0 auto 0; z-index: 100; color: var(--white); }
+/* Nền mờ đặt trên ::before để backdrop-filter không "nhốt" menu fixed toàn màn hình bên trong header */
+.site-header::before { content: ""; position: absolute; inset: 0; z-index: 0; opacity: 0; background: rgba(11, 29, 77, .86); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 6px 24px rgba(4, 12, 36, .28); transition: opacity .25s ease; pointer-events: none; }
+.site-header.is-scrolled::before { opacity: 1; }
+.site-header__inner { position: relative; }
 .site-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 10px; height: var(--header-h); }
 .brand { display: flex; flex-direction: column; gap: 2px; text-decoration: none; min-width: 0; position: relative; z-index: 2; }
 .brand .logo-slot--ismart { width: 106px; height: 32px; object-fit: contain; object-position: left center; }
