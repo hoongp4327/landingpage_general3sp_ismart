@@ -359,3 +359,19 @@
   }, { threshold: 0.25 });
   io.observe(sec);
 })();
+
+/* Video nền hero: chỉ phát khi hero còn trên màn hình; tắt khi người dùng chọn giảm chuyển động */
+(function () {
+  'use strict';
+  var v = document.getElementById('hero-video');
+  if (!v) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    v.removeAttribute('autoplay'); v.pause(); return;
+  }
+  var play = function () { var p = v.play(); if (p && p.catch) p.catch(function () {}); };
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (es) {
+      if (es[0].isIntersecting) play(); else v.pause();
+    }).observe(v);
+  }
+})();
