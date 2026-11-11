@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 40" role="img" aria-label="LOGO iSMART">
+  <!-- KHUNG GIỮ CHỖ: thay file này bằng logo iSMART bản trắng (giữ nguyên tên file) -->
+  <rect x="1.500" y="1.500" width="129" height="37" rx="9" fill="none" stroke="#FFFFFF" stroke-width="1.500" stroke-dasharray="6 4" opacity=".8"/>
+  <text x="66" y="25" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing=".500" fill="#FFFFFF">LOGO iSMART</text>
+</svg>

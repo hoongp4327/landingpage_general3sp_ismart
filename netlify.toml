@@ -1,0 +1,27 @@
+# Netlify – site tĩnh, không cần build
+[build]
+  publish = "."
+  command = ""
+
+# Ảnh, logo, favicon: cache 7 ngày (tên file không có hash nên không đặt immutable,
+# để khi thay logo/ảnh khách vẫn nhận bản mới sau tối đa 7 ngày)
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, stale-while-revalidate=86400"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

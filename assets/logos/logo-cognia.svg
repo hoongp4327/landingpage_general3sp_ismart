@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 96" role="img" aria-label="LOGO COGNIA">
+  <!-- KHUNG GIỮ CHỖ: thay file này bằng logo thật (giữ nguyên tên file) -->
+  <rect x="2" y="2" width="236" height="92" rx="14" fill="none" stroke="#46526B" stroke-width="2" stroke-dasharray="8 6" opacity=".75"/>
+  <text x="120" y="38" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="3" fill="#46526B">LOGO</text>
+  <text x="120" y="68" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#46526B">COGNIA</text>
+</svg>
