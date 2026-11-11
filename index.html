@@ -37,7 +37,7 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Playfair+Display:ital,wght@1,600;1,800&family=Caveat:wght@600;700&family=Lora:wght@700&display=swap&subset=vietnamese">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Playfair+Display:ital,wght@1,600;1,800&family=Caveat:wght@600;700&family=Lora:wght@700&display=swap&subset=vietnamese">
   <link rel="preload" as="image" type="image/webp" href="assets/img/hero-bg-poster.webp" fetchpriority="high">
-  <link rel="preload" as="image" type="image/webp" href="assets/img/hero-main.webp" imagesrcset="assets/img/hero-main-640.webp 640w, assets/img/hero-main.webp 960w" imagesizes="(min-width: 1024px) 250px, 46vw" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" href="assets/img/hero-visual.webp" imagesrcset="assets/img/hero-visual-800.webp 800w, assets/img/hero-visual.webp 1448w" imagesizes="(min-width: 1024px) 560px, 92vw" fetchpriority="high">
 
   <link rel="stylesheet" href="css/style.css">
 
@@ -138,7 +138,6 @@
         </video>
       </div>
       <div class="hero__glow" aria-hidden="true"></div>
-      <span class="deco deco--pencil" aria-hidden="true"><img src="assets/img/3d-pencil.webp" alt="" width="480" height="480" loading="lazy" decoding="async"></span>
       <div class="container hero__top">
         <div class="hero__copy">
           <p class="eyebrow eyebrow--accent">iSMART ONLINE · HỌC TẬP KHÔNG GIỚI HẠN</p>
@@ -169,66 +168,12 @@
           </div>
         </div>
 
-        <div class="fan" aria-hidden="false">
-          <img class="fan__img fan__img--2" src="assets/img/hero-sub-2.webp" srcset="assets/img/hero-sub-2-320.webp 320w, assets/img/hero-sub-2.webp 640w" sizes="170px" width="640" height="640" decoding="async" alt="Tay học sinh ghi chép bài bên cạnh laptop đang mở bài học">
-          <img class="fan__img fan__img--1" src="assets/img/hero-sub-1.webp" srcset="assets/img/hero-sub-1-320.webp 320w, assets/img/hero-sub-1.webp 640w" sizes="190px" width="640" height="640" decoding="async" alt="Nam sinh trung học cơ sở trò chuyện với giáo viên qua video trên máy tính bảng">
-          <img class="fan__img fan__img--main" src="assets/img/hero-main.webp" srcset="assets/img/hero-main-640.webp 640w, assets/img/hero-main.webp 960w" sizes="(min-width: 1024px) 250px, 46vw" width="960" height="1200" fetchpriority="high" decoding="async" alt="Bé gái tiểu học đeo tai nghe, giơ tay phát biểu trong giờ học trực tuyến tại nhà">
+        <div class="hero__visual">
+          <img src="assets/img/hero-visual.webp" srcset="assets/img/hero-visual-800.webp 800w, assets/img/hero-visual.webp 1448w" sizes="(min-width: 1024px) 560px, 92vw" width="1448" height="1086" fetchpriority="high" decoding="async" alt="Học sinh tiểu học và trung học cơ sở học trực tuyến tại nhà: bé gái giơ tay phát biểu, nam sinh trò chuyện với giáo viên qua máy tính bảng, học sinh theo dõi bài học trên laptop">
         </div>
       </div>
 
       <div class="hero__strip" aria-hidden="true"><i style="background:#D98E00"></i><i style="background:#0E9682"></i><i style="background:#2B5FE8"></i><i style="background:#CF2340"></i></div>
-    </section>
-
-    <!-- ===================== 2b. CHỌN LỚP – BẢN ĐỒ LỘ TRÌNH ===================== -->
-    <section class="route-sec" id="chon-lop" aria-label="Chọn lớp của con">
-      <div class="container">
-        <div class="map-wrap">
-          <div class="map" id="route-map">
-            <span class="deco deco--plane" aria-hidden="true"><img src="assets/img/3d-plane.webp" alt="" width="480" height="480" loading="lazy" decoding="async"></span>
-            <p class="map__ask">Con đang học lớp mấy?</p>
-            <div class="map__grades" role="group" aria-label="Chọn lớp của con để xem chương trình phù hợp">
-              <a class="gbtn" href="#lop-1" data-grade="1" style="--x:12.5%" aria-label="Lớp 1">1</a>
-              <a class="gbtn" href="#lop-2" data-grade="2" style="--x:21.875%" aria-label="Lớp 2">2</a>
-              <a class="gbtn" href="#lop-3" data-grade="3" style="--x:31.25%" aria-label="Lớp 3">3</a>
-              <a class="gbtn" href="#lop-4" data-grade="4" style="--x:40.625%" aria-label="Lớp 4">4</a>
-              <a class="gbtn" href="#lop-5" data-grade="5" style="--x:50%" aria-label="Lớp 5">5</a>
-              <a class="gbtn" href="#lop-6" data-grade="6" style="--x:59.375%" aria-label="Lớp 6">6</a>
-              <a class="gbtn" href="#lop-7" data-grade="7" style="--x:68.75%" aria-label="Lớp 7">7</a>
-              <a class="gbtn" href="#lop-8" data-grade="8" style="--x:78.125%" aria-label="Lớp 8">8</a>
-              <a class="gbtn" href="#lop-9" data-grade="9" style="--x:87.5%" aria-label="Lớp 9">9</a>
-            </div>
-
-            <svg class="map__svg" viewBox="0 0 1200 320" role="img" aria-label="Bản đồ lộ trình: iLEAD lớp 1 đến 5, iPass lớp 3 đến 9, iGlobal lớp 6 đến 9, Tiếng Trung lớp 6 đến 9">
-              <text class="map__axis" x="96" y="40" text-anchor="end">LỚP</text>
-              <g class="guides"><line data-g="1" x1="150" y1="62" x2="150" y2="300"/><line data-g="2" x1="262.5" y1="62" x2="262.5" y2="300"/><line data-g="3" x1="375" y1="62" x2="375" y2="300"/><line data-g="4" x1="487.5" y1="62" x2="487.5" y2="300"/><line data-g="5" x1="600" y1="62" x2="600" y2="300"/><line data-g="6" x1="712.5" y1="62" x2="712.5" y2="300"/><line data-g="7" x1="825" y1="62" x2="825" y2="300"/><line data-g="8" x1="937.5" y1="62" x2="937.5" y2="300"/><line data-g="9" x1="1050" y1="62" x2="1050" y2="300"/></g>
-              <a class="mline" href="#card-ilead" data-line="ilead" data-from="1" data-to="5" style="--m:#F2A93B;--i:0" aria-label="Tuyến iLEAD, lớp 1 đến 5, đích Pre-B1">
-                <path class="mline__path" pathLength="1" d="M114 128 L150 92 H640"/>
-                <g class="mline__st"><circle cx="150" cy="92" r="8"/><circle cx="262.5" cy="92" r="8"/><circle cx="375" cy="92" r="8"/><circle cx="487.5" cy="92" r="8"/><circle cx="600" cy="92" r="8"/></g>
-                <text class="mline__name" x="104" y="134" text-anchor="end">iLEAD</text>
-                <g class="mline__end"><rect x="640" y="76" width="92" height="32" rx="16"/><text x="686" y="97.5" text-anchor="middle">Pre-B1</text></g>
-              </a>
-              <a class="mline" href="#card-ipass" data-line="ipass" data-from="3" data-to="9" style="--m:#2CC4AE;--i:1" aria-label="Tuyến iPass, lớp 3 đến 9, đích A2+">
-                <path class="mline__path" pathLength="1" d="M339 186 L375 150 H1090"/>
-                <g class="mline__st"><circle cx="375" cy="150" r="8"/><circle cx="487.5" cy="150" r="8"/><circle cx="600" cy="150" r="8"/><circle cx="712.5" cy="150" r="8"/><circle cx="825" cy="150" r="8"/><circle cx="937.5" cy="150" r="8"/><circle cx="1050" cy="150" r="8"/></g>
-                <text class="mline__name" x="329" y="192" text-anchor="end">iPass</text>
-                <g class="mline__end"><rect x="1090" y="134" width="92" height="32" rx="16"/><text x="1136" y="155.5" text-anchor="middle">A2+</text></g>
-              </a>
-              <a class="mline" href="#card-iglobal" data-line="iglobal" data-from="6" data-to="9" style="--m:#6C97FF;--i:2" aria-label="Tuyến iGlobal, lớp 6 đến 9, đích B2">
-                <path class="mline__path" pathLength="1" d="M676.5 244 L712.5 208 H1090"/>
-                <g class="mline__st"><circle cx="712.5" cy="208" r="8"/><circle cx="825" cy="208" r="8"/><circle cx="937.5" cy="208" r="8"/><circle cx="1050" cy="208" r="8"/></g>
-                <text class="mline__name" x="666.5" y="250" text-anchor="end">iGlobal</text>
-                <g class="mline__end"><rect x="1090" y="192" width="92" height="32" rx="16"/><text x="1136" y="213.5" text-anchor="middle">B2</text></g>
-              </a>
-              <a class="mline" href="#card-chinese" data-line="chinese" data-from="6" data-to="9" style="--m:#FF5C7A;--i:3" aria-label="Tuyến Tiếng Trung, lớp 6 đến 9, đích HSK5">
-                <path class="mline__path" pathLength="1" d="M676.5 302 L712.5 266 H1090"/>
-                <g class="mline__st"><circle cx="712.5" cy="266" r="8"/><circle cx="825" cy="266" r="8"/><circle cx="937.5" cy="266" r="8"/><circle cx="1050" cy="266" r="8"/></g>
-                <text class="mline__name" x="666.5" y="308" text-anchor="end">Tiếng Trung</text>
-                <g class="mline__end"><rect x="1090" y="250" width="92" height="32" rx="16"/><text x="1136" y="271.5" text-anchor="middle">HSK5</text></g>
-              </a>
-            </svg>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- ===================== 3. 4 CHƯƠNG TRÌNH ===================== -->
