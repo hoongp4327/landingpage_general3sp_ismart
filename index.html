@@ -34,8 +34,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap&subset=vietnamese">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap&subset=vietnamese">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Playfair+Display:ital,wght@1,600;1,800&family=Caveat:wght@600;700&display=swap&subset=vietnamese">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Playfair+Display:ital,wght@1,600;1,800&family=Caveat:wght@600;700&display=swap&subset=vietnamese">
+  <link rel="preload" as="image" type="image/webp" href="assets/img/hero-bg.webp" fetchpriority="high">
   <link rel="preload" as="image" type="image/webp" href="assets/img/hero-main.webp" imagesrcset="assets/img/hero-main-640.webp 640w, assets/img/hero-main.webp 960w" imagesizes="(min-width: 1024px) 250px, 46vw" fetchpriority="high">
 
   <link rel="stylesheet" href="css/style.css">
@@ -130,7 +131,9 @@
 
     <!-- ===================== 2. HERO – BẢN ĐỒ LỘ TRÌNH ===================== -->
     <section class="hero" id="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
       <div class="hero__glow" aria-hidden="true"></div>
+      <span class="deco deco--pencil" aria-hidden="true"><img src="assets/img/3d-pencil.webp" alt="" width="480" height="480" loading="lazy" decoding="async"></span>
       <div class="container hero__top">
         <div class="hero__copy">
           <p class="eyebrow eyebrow--accent">iSMART ONLINE · HỌC TẬP KHÔNG GIỚI HẠN</p>
@@ -157,6 +160,7 @@
       <div class="container">
         <div class="map-wrap">
           <div class="map" id="route-map">
+            <span class="deco deco--plane" aria-hidden="true"><img src="assets/img/3d-plane.webp" alt="" width="480" height="480" loading="lazy" decoding="async"></span>
             <p class="map__ask">Con đang học lớp mấy?</p>
             <div class="map__grades" role="group" aria-label="Chọn lớp của con để xem chương trình phù hợp">
               <a class="gbtn" href="#lop-1" data-grade="1" style="--x:12.5%" aria-label="Lớp 1">1</a>
@@ -206,11 +210,12 @@
 
     <!-- ===================== 3. 4 CHƯƠNG TRÌNH ===================== -->
     <section class="section section--programs" id="chuong-trinh">
+      <span class="deco deco--books" aria-hidden="true"><img src="assets/img/3d-books.webp" alt="" width="480" height="480" loading="lazy" decoding="async"></span>
       <div class="container">
         <header class="section-head section-head--split reveal">
           <div>
             <p class="eyebrow">YOUR LEARNING JOURNEY</p>
-            <h2 class="section-title">Mỗi mục tiêu học tập.<br>Một hành trình phù hợp</h2>
+            <h2 class="section-title">Mỗi mục tiêu học tập.<br><em>Một hành trình phù hợp</em></h2>
           </div>
           <p class="section-desc">Bấm vào chương trình ba mẹ quan tâm để xem chi tiết lộ trình và đăng ký đánh giá năng lực miễn phí.</p>
         </header>
@@ -367,6 +372,7 @@
           </div>
 
           <div class="about__visual reveal">
+            <span class="deco deco--globe" aria-hidden="true"><img src="assets/img/3d-globe.webp" alt="" width="480" height="480" loading="lazy" decoding="async"></span>
             <img class="av av--1" src="assets/img/about-1.webp" srcset="assets/img/about-1-640.webp 640w, assets/img/about-1.webp 1200w" sizes="(min-width: 1024px) 520px, 78vw" width="1200" height="900" loading="lazy" decoding="async" alt="Giáo viên hướng dẫn học sinh làm thí nghiệm khoa học trong lớp học tiếng Anh qua Toán và Khoa học">
             <img class="av av--2" src="assets/img/about-2.webp" srcset="assets/img/about-2-320.webp 320w, assets/img/about-2.webp 640w" sizes="(min-width: 1024px) 220px, 36vw" width="640" height="640" loading="lazy" decoding="async" alt="Giáo viên trẻ đeo tai nghe đang dạy học trực tuyến">
             <img class="av av--3" src="assets/img/about-3.webp" srcset="assets/img/about-3-320.webp 320w, assets/img/about-3.webp 640w" sizes="(min-width: 1024px) 190px, 30vw" width="640" height="640" loading="lazy" decoding="async" alt="Phụ huynh ngồi cạnh con cùng xem bài học trên laptop">
@@ -401,6 +407,7 @@
 
     <!-- ===================== 5. GIÁ TRỊ CỐT LÕI LEADS ===================== -->
     <section class="section leads-sec" id="gia-tri-cot-loi">
+      <span class="deco deco--cap" aria-hidden="true"><img src="assets/img/3d-cap.webp" alt="" width="480" height="480" loading="lazy" decoding="async"></span>
       <div class="container">
         <header class="section-head section-head--split reveal">
           <div>
@@ -441,11 +448,12 @@
     </section>
 
     <!-- ===================== 6. THÀNH TỰU ===================== -->
-    <section class="section section--white" id="thanh-tuu">
+    <section class="section section--navy" id="thanh-tuu">
       <div class="container awards-wrap">
         <header class="awards-head reveal">
           <p class="eyebrow">THÀNH TỰU</p>
-          <h2 class="section-title">Chất lượng được kiểm định trong nước và quốc tế</h2>
+          <h2 class="section-title">Chất lượng được <em>kiểm định</em> trong nước và quốc tế</h2>
+          <span class="deco deco--trophy" aria-hidden="true"><img src="assets/img/3d-trophy.webp" alt="" width="480" height="480" loading="lazy" decoding="async"></span>
         </header>
 
         <ol class="awards">
@@ -492,11 +500,11 @@
     </section>
 
     <!-- ===================== 7. ĐỐI TÁC ===================== -->
-    <section class="section" id="doi-tac">
+    <section class="section section--tint" id="doi-tac">
       <div class="container">
         <header class="section-head reveal">
           <p class="eyebrow">ĐỐI TÁC CỦA CHÚNG TÔI</p>
-          <h2 class="section-title">Hơn 700 trường và tổ chức giáo dục đồng hành cùng iSMART</h2>
+          <h2 class="section-title">Hơn <em>700 trường</em> và tổ chức giáo dục đồng hành cùng iSMART</h2>
         </header>
 
         <div class="partners">
@@ -540,6 +548,7 @@
         <path d="M0 76 H440 C520 76 530 60 620 60" stroke="#6C97FF"/>
         <path d="M0 106 H420 C520 106 520 60 620 60" stroke="#FF5C7A"/>
       </svg>
+      <span class="deco deco--plane2" aria-hidden="true"><img src="assets/img/3d-plane.webp" alt="" width="480" height="480" loading="lazy" decoding="async"></span>
       <div class="container cta__inner">
         <div class="cta__copy reveal">
           <p class="eyebrow eyebrow--accent">THE NEXT STEP STARTS TODAY</p>

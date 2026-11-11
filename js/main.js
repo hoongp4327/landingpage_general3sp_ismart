@@ -324,3 +324,26 @@
     updateProgramLinks();
   });
 })();
+
+/* Vật thể 3D: trôi nhẹ theo cuộn trang (parallax) */
+(function () {
+  'use strict';
+  var items = Array.prototype.slice.call(document.querySelectorAll('.deco'));
+  if (!items.length || !window.requestAnimationFrame) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var ticking = false;
+  function update() {
+    ticking = false;
+    var vh = window.innerHeight;
+    items.forEach(function (el, i) {
+      var r = el.getBoundingClientRect();
+      if (r.bottom < -200 || r.top > vh + 200) return;
+      var speed = (i % 2 ? -1 : 1) * (0.06 + (i % 3) * 0.03);
+      var offset = (r.top + r.height / 2 - vh / 2) * speed;
+      el.style.setProperty('--py', offset.toFixed(1) + 'px');
+    });
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+  }, { passive: true });
+})();
