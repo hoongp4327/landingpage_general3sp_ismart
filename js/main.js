@@ -347,3 +347,15 @@
     if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
   }, { passive: true });
 })();
+
+/* Section chọn lớp: bắt đầu vẽ bản đồ khi cuộn tới */
+(function () {
+  'use strict';
+  var sec = document.getElementById('chon-lop');
+  if (!sec) return;
+  if (!('IntersectionObserver' in window)) { sec.classList.add('is-in'); return; }
+  var io = new IntersectionObserver(function (entries) {
+    if (entries[0].isIntersecting) { sec.classList.add('is-in'); io.disconnect(); }
+  }, { threshold: 0.25 });
+  io.observe(sec);
+})();

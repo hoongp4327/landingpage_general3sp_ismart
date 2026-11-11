@@ -34,8 +34,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Playfair+Display:ital,wght@1,600;1,800&family=Caveat:wght@600;700&display=swap&subset=vietnamese">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Playfair+Display:ital,wght@1,600;1,800&family=Caveat:wght@600;700&display=swap&subset=vietnamese">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Playfair+Display:ital,wght@1,600;1,800&family=Caveat:wght@600;700&family=Lora:wght@700&display=swap&subset=vietnamese">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Playfair+Display:ital,wght@1,600;1,800&family=Caveat:wght@600;700&family=Lora:wght@700&display=swap&subset=vietnamese">
   <link rel="preload" as="image" type="image/webp" href="assets/img/hero-bg.webp" fetchpriority="high">
   <link rel="preload" as="image" type="image/webp" href="assets/img/hero-main.webp" imagesrcset="assets/img/hero-main-640.webp 640w, assets/img/hero-main.webp 960w" imagesizes="(min-width: 1024px) 250px, 46vw" fetchpriority="high">
 
@@ -137,7 +137,22 @@
       <div class="container hero__top">
         <div class="hero__copy">
           <p class="eyebrow eyebrow--accent">iSMART ONLINE · HỌC TẬP KHÔNG GIỚI HẠN</p>
-          <h1 class="hero__title"><span class="ln"><span>Chọn đúng lộ trình.</span></span><span class="ln"><span class="accent">Mở rộng tương lai.</span></span></h1>
+          <h1 class="hero__title hero__title--svg">
+            <span class="sr-only">Chọn đúng lộ trình. Mở rộng tương lai.</span>
+            <svg class="ht" viewBox="0 0 779.33 459.48" aria-hidden="true" focusable="false">
+              <g class="ht__l1"><text class="ht-sans" transform="translate(27.93 78.76)">CHỌN ĐÚNG</text></g>
+              <g class="ht__l2">
+                <path class="ht-tri ht-tri--3" d="M165.91,110.09v62.36c0,2.9,3.13,4.71,5.64,3.26l54-31.18c2.51-1.45,2.51-5.07,0-6.52l-54-31.18c-2.51-1.45-5.64.36-5.64,3.26Z"/>
+                <path class="ht-tri ht-tri--2" d="M87.62,110.09v62.36c0,2.9,3.13,4.71,5.64,3.26l54-31.18c2.51-1.45,2.51-5.07,0-6.52l-54-31.18c-2.51-1.45-5.64.36-5.64,3.26Z"/>
+                <path class="ht-tri ht-tri--1" d="M8.47,110.09v62.36c0,2.9,3.13,4.71,5.64,3.26l54-31.18c2.51-1.45,2.51-5.07,0-6.52l-54-31.18c-2.51-1.45-5.64.36-5.64,3.26Z"/>
+                <text class="ht-sans" transform="translate(239.77 173.66)">LỘ TRÌNH</text>
+              </g>
+              <g class="ht__l3"><text class="ht-serif ht-serif--cyan" transform="translate(0 317.54) rotate(-3.36) skewX(-3.35)">Mở rộng</text></g>
+              <g class="ht__l4"><text class="ht-serif ht-serif--gold" transform="translate(169.13 423.12) rotate(-3.36) skewX(-3.35)">Tương lai</text></g>
+              <path class="ht-spark ht-spark--a" d="M656.84,239.61c-20.57,3.95-23.77,7.15-27.72,27.72-3.95-20.57-7.15-23.77-27.72-27.72,20.57-3.95,23.77-7.15,27.72-27.72,3.95,20.57,7.15,23.77,27.72,27.72Z"/>
+              <path class="ht-spark ht-spark--b" d="M164.3,375.4c-27.57,5.29-31.86,9.58-37.15,37.15-5.29-27.57-9.58-31.86-37.15-37.15,27.57-5.29,31.86-9.58,37.15-37.15,5.29,27.57,9.58,31.86,37.15,37.15Z"/>
+            </svg>
+          </h1>
           <p class="hero__desc">Cùng iSMART khám phá chương trình học trực tuyến phù hợp để con phát triển năng lực ngôn ngữ một cách vững vàng.</p>
           <div class="hero__actions">
             <a class="btn btn--accent btn--lg" href="#chuong-trinh">Khám phá 4 chương trình <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
@@ -156,7 +171,11 @@
         </div>
       </div>
 
-      <!-- Bản đồ tuyến: 4 chương trình × lớp 1–9 -->
+      <div class="hero__strip" aria-hidden="true"><i style="background:#D98E00"></i><i style="background:#0E9682"></i><i style="background:#2B5FE8"></i><i style="background:#CF2340"></i></div>
+    </section>
+
+    <!-- ===================== 2b. CHỌN LỚP – BẢN ĐỒ LỘ TRÌNH ===================== -->
+    <section class="route-sec" id="chon-lop" aria-label="Chọn lớp của con">
       <div class="container">
         <div class="map-wrap">
           <div class="map" id="route-map">
@@ -205,7 +224,6 @@
           </div>
         </div>
       </div>
-      <div class="hero__strip" aria-hidden="true"><i style="background:#D98E00"></i><i style="background:#0E9682"></i><i style="background:#2B5FE8"></i><i style="background:#CF2340"></i></div>
     </section>
 
     <!-- ===================== 3. 4 CHƯƠNG TRÌNH ===================== -->
