@@ -80,3 +80,17 @@ Panel chương trình trên desktop là cột dọc hẹp nên ảnh ngang 16:9 
 
 Mẫu prompt (iPass; 3 ảnh còn lại cùng cấu trúc, đổi nhân vật/bối cảnh theo ảnh tham chiếu):
 > Tall vertical portrait version of the reference scene, same boy, same white school uniform shirt, same room and teal desk lamp. Authentic photorealistic lifestyle photograph. A 12-year-old Vietnamese middle school boy sits at his study desk, centered horizontally in the frame, looking up from his notebook with a calm confident smile, holding a pen. His face is in the upper half of the frame, about 30 to 38 percent from the top, fully visible and centered. The lower 40 percent of the frame is calm and simple: the wooden desk with an open textbook and notebook slightly out of focus, pages illegible. Warm natural window light, teal and navy accents, shallow depth of field. No readable text, no letters, no logos, no watermark, no brand marks. Natural, anatomically correct hands.
+
+## Bổ sung lần 2 – ảnh 4 chương trình đồng bộ với landing page từng sản phẩm
+
+Ảnh `prog-*.webp` (ngang 16:9) và `prog-*-tall.webp` (dọc 9:16) được **tạo lại hoàn toàn** bằng Higgsfield `gpt_image_2_6` (quality high, 2k), bám theo phong cách hero của chính website sản phẩm để phụ huynh bấm sang thấy liền mạch. Tất cả đều thể hiện việc **học online**.
+
+| Chương trình | Tham chiếu phong cách | Nội dung ảnh |
+|---|---|---|
+| iLEAD | ileadonline.ismart.edu.vn – nhiều màu, đồ vật 3D, robot | 2 bé tiểu học đeo tai nghe trắng vẫy tay chào lớp online; robot, mũ tốt nghiệp, bóng đèn, bút chì 3D; nắng, cỏ xanh |
+| iPass | ipass.ismart.edu.vn – nền xoáy xanh nhạt, học sinh lớn hơn | Nữ sinh ~12 tuổi + nam sinh ~10 tuổi đeo tai nghe đỏ cam, máy tính bảng + laptop, hào hứng vì kết quả tốt |
+| iGlobal | iglobal.ismart.edu.vn – navy công nghệ, địa cầu số | Học sinh THCS đồng phục, tai nghe micro, máy tính bảng; quả địa cầu số phát sáng, biểu tượng hologram |
+| Tiếng Trung | chinese.ismart.edu.vn – nam sinh áo jean + áo đỏ ngồi trên điện thoại lớn | Như trang gốc nhưng nền đỏ – vàng: đèn lồng đỏ, mây vàng, bong bóng chat đỏ trống (không chữ) |
+
+Mẫu prompt (Tiếng Trung, bản dọc):
+> Tall vertical photorealistic image, online Chinese language learning with a strong festive red theme. A cheerful 13-year-old Vietnamese middle school boy in a denim jacket over a bright red t-shirt sits on top of a giant glossy smartphone lying at an angle, hugging a stack of orange and red books, smiling confidently. His face is centered horizontally in the upper half of the frame, about 30 to 38 percent from the top, fully visible. Background: rich red and crimson gradient with soft golden light, a few glowing red paper lanterns with gold tassels, subtle golden cloud patterns, and a few floating glossy 3D red speech bubbles and a red headphone icon that are blank with no characters. The lower 40 percent of the frame is calm: the giant smartphone screen glowing softly and his sneakers, slightly out of focus. Warm, energetic, premium, red and gold dominant with a touch of navy. No text, no letters, no Chinese characters, no logos, no watermark. Natural, anatomically correct hands.

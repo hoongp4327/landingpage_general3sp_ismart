@@ -682,3 +682,9 @@ html.anim .reveal.is-in .pt-spark { animation: htSpark 2.8s ease-in-out 1.2s inf
 html.anim .reveal.is-in .pt-spark--orange { animation-delay: 2.1s; }
 @keyframes ptRing { to { stroke-dashoffset: 0; } }
 @media (prefers-reduced-motion: reduce) { .pt-ring { stroke-dasharray: none !important; stroke-dashoffset: 0 !important; } }
+/* Ảnh chương trình bản mới: mặt nằm cao hơn → lấy khung lệch lên trên; chỉnh từng thẻ cho 2 nhân vật */
+@media (min-width: 1180px) {
+  .js-panels .prog-card__media img { object-position: 50% 18%; }
+  .js-panels #card-ilead .prog-card__media img { object-position: 42% 18%; }
+  .js-panels #card-ipass .prog-card__media img { object-position: 52% 18%; }
+}
