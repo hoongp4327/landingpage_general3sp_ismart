@@ -623,3 +623,19 @@ html:not(.anim) .route-sec *, html:not(.anim) .route-sec *::after { animation: n
   .hero__copy { position: relative; z-index: 2; }
   .hero__visual { max-width: none; width: 120%; margin: 0 -24px 0 -20%; }
 }
+
+/* =========================================================
+   v7 – CTA HERO THEO LAYOUT MỚI
+   ========================================================= */
+.hero__desc { font-weight: 600; color: #fff; }
+.hero__actions { flex-direction: column; align-items: flex-start; }
+.hero__cta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 30px; }
+.cta-main { display: inline-flex; align-items: center; gap: 22px; min-height: 64px; padding: 10px 10px 10px 26px; border-radius: 16px; background: var(--accent); color: var(--navy-900); font-size: 17px; font-weight: 700; text-decoration: none; box-shadow: 0 10px 30px rgba(245, 160, 74, .35); transition: transform .2s ease, background-color .2s ease, box-shadow .2s ease; }
+.cta-main__icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: var(--navy-900); color: #fff; transition: transform .3s var(--ease); }
+.cta-main__icon .icon { width: 20px; height: 20px; }
+.cta-main:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 14px 34px rgba(245, 160, 74, .45); }
+.cta-main:hover .cta-main__icon { transform: rotate(45deg); }
+.cta-link { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: #fff; font-size: 16px; font-weight: 700; text-decoration: none; }
+.cta-link .icon { width: 18px; height: 18px; color: var(--accent); transition: transform .25s var(--ease); }
+.cta-link:hover { color: var(--accent); }
+.cta-link:hover .icon { transform: translateX(5px); }
