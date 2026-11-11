@@ -66,3 +66,17 @@ Giữ nguyên tên file và tỉ lệ. Lệnh chuyển WebP mẫu:
 ```bash
 ffmpeg -i nguon.jpg -vf "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720" -c:v libwebp -quality 76 prog-ilead.webp
 ```
+
+## Bổ sung – ảnh dọc cho panel chương trình (desktop ≥ 1180px)
+
+Panel chương trình trên desktop là cột dọc hẹp nên ảnh ngang 16:9 bị cắt mất mặt. Bốn ảnh dọc 9:16 dưới đây được tạo bằng Higgsfield `gpt_image_2_6` (quality high, 2k), **dùng ảnh ngang cũ làm ảnh tham chiếu** để giữ cùng nhân vật và bối cảnh. Mặt nhân vật đặt ở khoảng 30–38% từ trên xuống, chính giữa; 40% phía dưới là nền yên để đặt chữ. Màn hình nhỏ hơn 1180px vẫn dùng ảnh ngang cũ (`<picture>`).
+
+| File (lớn / nhỏ) | Kích thước | Tham chiếu |
+|---|---|---|
+| `prog-ilead-tall.webp` / `-tall-400.webp` | 720×1280 / 400×712 | prog-ilead |
+| `prog-ipass-tall.webp` / `-tall-400.webp` | 720×1280 / 400×712 | prog-ipass |
+| `prog-iglobal-tall.webp` / `-tall-400.webp` | 720×1280 / 400×712 | prog-iglobal |
+| `prog-chinese-tall.webp` / `-tall-400.webp` | 720×1280 / 400×712 | prog-chinese |
+
+Mẫu prompt (iPass; 3 ảnh còn lại cùng cấu trúc, đổi nhân vật/bối cảnh theo ảnh tham chiếu):
+> Tall vertical portrait version of the reference scene, same boy, same white school uniform shirt, same room and teal desk lamp. Authentic photorealistic lifestyle photograph. A 12-year-old Vietnamese middle school boy sits at his study desk, centered horizontally in the frame, looking up from his notebook with a calm confident smile, holding a pen. His face is in the upper half of the frame, about 30 to 38 percent from the top, fully visible and centered. The lower 40 percent of the frame is calm and simple: the wooden desk with an open textbook and notebook slightly out of focus, pages illegible. Warm natural window light, teal and navy accents, shallow depth of field. No readable text, no letters, no logos, no watermark, no brand marks. Natural, anatomically correct hands.
