@@ -118,8 +118,13 @@
     });
   });
   lines.forEach(function (ln) {
-    ln.addEventListener('click', function () {
-      setActive(doc.getElementById('card-' + ln.getAttribute('data-line')));
+    ln.addEventListener('click', function (e) {
+      var card = doc.getElementById('card-' + ln.getAttribute('data-line'));
+      if (!card) return;
+      // Tự cuộn thay vì đổi hash, để không làm mất lớp đang chọn (#lop-N) và utm_term
+      e.preventDefault();
+      setActive(card);
+      (section || card).scrollIntoView({ behavior: reducedMotion() ? 'auto' : 'smooth', block: 'start' });
     });
   });
 

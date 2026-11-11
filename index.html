@@ -42,6 +42,16 @@
 
   <!-- Bật hiệu ứng fade-up chỉ khi JS chạy được; tự gỡ nếu main.js không khởi động kịp -->
   <script>
+    /* Hiệu ứng vào trang ở hero chỉ chạy khi có class "anim"; nếu đồng hồ animation của
+       trình duyệt bị đứng (tab nền, webview hạn chế) thì gỡ class để nội dung hiện ngay. */
+    (function (r) {
+      r.classList.add('anim');
+      var t0 = document.timeline ? document.timeline.currentTime : null;
+      setTimeout(function () {
+        var t1 = document.timeline ? document.timeline.currentTime : null;
+        if (t0 === null || t1 === null || t1 - t0 < 400) r.classList.remove('anim');
+      }, 1800);
+    })(document.documentElement);
     (function (r) {
       if (!('IntersectionObserver' in window)) return;
       r.classList.add('js-reveal');
