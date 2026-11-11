@@ -657,3 +657,5 @@ html:not(.anim) .route-sec *, html:not(.anim) .route-sec *::after { animation: n
   .js-panels .prog-card__sheet { justify-content: center; }
   .js-panels .prog-card__foot { margin-top: 28px; padding-top: 0; }
 }
+/* Tiêu đề SVG ở hero nhỏ hơn ~15% (600px → 510px) để không lấn ảnh minh họa */
+.ht { max-width: 510px; }
