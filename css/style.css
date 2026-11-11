@@ -618,3 +618,8 @@ html:not(.anim) .route-sec *, html:not(.anim) .route-sec *::after { animation: n
   .hero__visual { max-width: 640px; margin: 0 -24px 0 0; justify-self: end; }
 }
 @media (prefers-reduced-motion: reduce) { .hero__visual img { animation: none; } }
+/* Ảnh hero to hơn ~20%: lấn sang khoảng trống bên trái (phần mép ảnh trong suốt), chữ luôn nằm trên */
+@media (min-width: 1024px) {
+  .hero__copy { position: relative; z-index: 2; }
+  .hero__visual { max-width: none; width: 120%; margin: 0 -24px 0 -20%; }
+}
