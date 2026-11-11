@@ -89,7 +89,7 @@ Mẫu prompt (iPass; 3 ảnh còn lại cùng cấu trúc, đổi nhân vật/b�
 |---|---|---|
 | iLEAD | ileadonline.ismart.edu.vn – nhiều màu, đồ vật 3D, robot | 2 bé tiểu học đeo tai nghe trắng vẫy tay chào lớp online; robot, mũ tốt nghiệp, bóng đèn, bút chì 3D; nắng, cỏ xanh |
 | iPass | ipass.ismart.edu.vn – nền xoáy xanh nhạt, học sinh lớn hơn | Nữ sinh ~12 tuổi + nam sinh ~10 tuổi đeo tai nghe đỏ cam, máy tính bảng + laptop, hào hứng vì kết quả tốt |
-| iGlobal | iglobal.ismart.edu.vn – navy công nghệ, địa cầu số | Học sinh THCS đồng phục, tai nghe micro, máy tính bảng; quả địa cầu số phát sáng, biểu tượng hologram |
+| iGlobal | iglobal.ismart.edu.vn – navy công nghệ, địa cầu số | Nữ sinh lớp 6 (khoảng 12 tuổi), đồng phục, tai nghe micro, máy tính bảng; quả địa cầu số phát sáng, biểu tượng hologram |
 | Tiếng Trung | chinese.ismart.edu.vn – nam sinh áo jean + áo đỏ ngồi trên điện thoại lớn | Như trang gốc nhưng nền đỏ – vàng: đèn lồng đỏ, mây vàng, bong bóng chat đỏ trống (không chữ) |
 
 Mẫu prompt (Tiếng Trung, bản dọc):

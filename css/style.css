@@ -688,3 +688,4 @@ html.anim .reveal.is-in .pt-spark--orange { animation-delay: 2.1s; }
   .js-panels #card-ilead .prog-card__media img { object-position: 42% 18%; }
   .js-panels #card-ipass .prog-card__media img { object-position: 52% 18%; }
 }
+@media (min-width: 1180px) { .js-panels #card-iglobal .prog-card__media img { object-position: 46% 18%; } }
