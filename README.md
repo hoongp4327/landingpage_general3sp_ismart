@@ -2,7 +2,9 @@
 
 Landing page một link duy nhất để sales gửi qua Zalo / Messenger / SMS / email. Phụ huynh (con học lớp 1–9) tự chọn 1 trong 4 chương trình online: **iLEAD**, **iPass**, **iGlobal**, **Tiếng Trung THCS**.
 
-- Mobile-first, HTML + CSS + JavaScript thuần, **không framework, không bước build**.
+- HTML + CSS + JavaScript thuần, **không framework, không bước build**.
+- **Bản v2 – "Bản đồ lộ trình" (ưu tiên desktop):** hero là bản đồ tuyến kiểu metro, 4 chương trình là 4 tuyến chạy qua 9 "ga" lớp 1–9 và tự vẽ ra khi vào trang. Bấm vào số lớp trên bản đồ = mở link `#lop-N` (bấm lại lần nữa để bỏ chọn); bấm vào một tuyến = nhảy tới chương trình đó. Phần chương trình là 4 panel ngang, rê chuột để mở từng panel (từ 1180px trở lên; màn hình nhỏ hơn hoặc khi JS tắt thì các thẻ xếp dọc, đủ nội dung). Mobile mới ở mức dùng được, chưa tối ưu riêng.
+- Bản v1 (bố cục landing page thông thường, mobile-first) nằm ở commit `a27a9d5`.
 - Domain dự kiến: `https://online.ismart.edu.vn/` (đã dùng cho `canonical`, `og:url`, `og:image`).
 
 ## Cấu trúc thư mục

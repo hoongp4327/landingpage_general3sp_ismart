@@ -36,7 +36,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap&subset=vietnamese">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap&subset=vietnamese">
-  <link rel="preload" as="image" type="image/webp" href="assets/img/hero-main.webp" imagesrcset="assets/img/hero-main-640.webp 640w, assets/img/hero-main.webp 960w" imagesizes="(min-width: 1024px) 340px, 62vw" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" href="assets/img/hero-main.webp" imagesrcset="assets/img/hero-main-640.webp 640w, assets/img/hero-main.webp 960w" imagesizes="(min-width: 1024px) 250px, 46vw" fetchpriority="high">
 
   <link rel="stylesheet" href="css/style.css">
 
@@ -118,35 +118,77 @@
 
   <main id="main">
 
-    <!-- ===================== 2. HERO ===================== -->
+    <!-- ===================== 2. HERO – BẢN ĐỒ LỘ TRÌNH ===================== -->
     <section class="hero" id="hero">
-      <div class="container hero__inner">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container hero__top">
         <div class="hero__copy">
           <p class="eyebrow eyebrow--accent">iSMART ONLINE · HỌC TẬP KHÔNG GIỚI HẠN</p>
-          <h1 class="hero__title">Chọn đúng lộ trình.<br><span class="accent">Mở rộng tương lai.</span></h1>
+          <h1 class="hero__title"><span class="ln"><span>Chọn đúng lộ trình.</span></span><span class="ln"><span class="accent">Mở rộng tương lai.</span></span></h1>
           <p class="hero__desc">Cùng iSMART khám phá chương trình học trực tuyến phù hợp để con phát triển năng lực ngôn ngữ một cách vững vàng.</p>
-          <a class="btn btn--accent btn--lg" href="#chuong-trinh">Khám phá 4 chương trình <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <div class="hero__actions">
+            <a class="btn btn--accent btn--lg" href="#chuong-trinh">Khám phá 4 chương trình <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <ul class="hero__tags">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-flex"/></svg>Học trực tuyến linh hoạt</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg>4 chương trình lựa chọn</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg>Học đúng mục tiêu</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="hero__visual">
-          <img class="hv hv--main" src="assets/img/hero-main.webp"
-               srcset="assets/img/hero-main-640.webp 640w, assets/img/hero-main.webp 960w"
-               sizes="(min-width: 1024px) 340px, 62vw"
-               width="960" height="1200" fetchpriority="high" decoding="async"
-               alt="Bé gái tiểu học đeo tai nghe, giơ tay phát biểu trong giờ học trực tuyến tại nhà">
-          <img class="hv hv--sub1" src="assets/img/hero-sub-1.webp"
-               srcset="assets/img/hero-sub-1-320.webp 320w, assets/img/hero-sub-1.webp 640w"
-               sizes="(min-width: 1024px) 200px, 38vw"
-               width="640" height="640" loading="lazy" decoding="async"
-               alt="Nam sinh trung học cơ sở trò chuyện với giáo viên qua video trên máy tính bảng">
-          <img class="hv hv--sub2" src="assets/img/hero-sub-2.webp"
-               srcset="assets/img/hero-sub-2-320.webp 320w, assets/img/hero-sub-2.webp 640w"
-               sizes="(min-width: 1024px) 150px, 28vw"
-               width="640" height="640" loading="lazy" decoding="async"
-               alt="Tay học sinh ghi chép bài bên cạnh laptop đang mở bài học">
-          <span class="chip chip--1"><svg class="icon" aria-hidden="true"><use href="#i-flex"/></svg>Học trực tuyến linh hoạt</span>
-          <span class="chip chip--2"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg>4 chương trình lựa chọn</span>
-          <span class="chip chip--3"><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg>Học đúng mục tiêu</span>
+        <div class="fan" aria-hidden="false">
+          <img class="fan__img fan__img--2" src="assets/img/hero-sub-2.webp" srcset="assets/img/hero-sub-2-320.webp 320w, assets/img/hero-sub-2.webp 640w" sizes="170px" width="640" height="640" decoding="async" alt="Tay học sinh ghi chép bài bên cạnh laptop đang mở bài học">
+          <img class="fan__img fan__img--1" src="assets/img/hero-sub-1.webp" srcset="assets/img/hero-sub-1-320.webp 320w, assets/img/hero-sub-1.webp 640w" sizes="190px" width="640" height="640" decoding="async" alt="Nam sinh trung học cơ sở trò chuyện với giáo viên qua video trên máy tính bảng">
+          <img class="fan__img fan__img--main" src="assets/img/hero-main.webp" srcset="assets/img/hero-main-640.webp 640w, assets/img/hero-main.webp 960w" sizes="(min-width: 1024px) 250px, 46vw" width="960" height="1200" fetchpriority="high" decoding="async" alt="Bé gái tiểu học đeo tai nghe, giơ tay phát biểu trong giờ học trực tuyến tại nhà">
+        </div>
+      </div>
+
+      <!-- Bản đồ tuyến: 4 chương trình × lớp 1–9 -->
+      <div class="container">
+        <div class="map-wrap">
+          <div class="map" id="route-map">
+            <p class="map__ask">Con đang học lớp mấy?</p>
+            <div class="map__grades" role="group" aria-label="Chọn lớp của con để xem chương trình phù hợp">
+              <a class="gbtn" href="#lop-1" data-grade="1" style="--x:12.5%" aria-label="Lớp 1">1</a>
+              <a class="gbtn" href="#lop-2" data-grade="2" style="--x:21.875%" aria-label="Lớp 2">2</a>
+              <a class="gbtn" href="#lop-3" data-grade="3" style="--x:31.25%" aria-label="Lớp 3">3</a>
+              <a class="gbtn" href="#lop-4" data-grade="4" style="--x:40.625%" aria-label="Lớp 4">4</a>
+              <a class="gbtn" href="#lop-5" data-grade="5" style="--x:50%" aria-label="Lớp 5">5</a>
+              <a class="gbtn" href="#lop-6" data-grade="6" style="--x:59.375%" aria-label="Lớp 6">6</a>
+              <a class="gbtn" href="#lop-7" data-grade="7" style="--x:68.75%" aria-label="Lớp 7">7</a>
+              <a class="gbtn" href="#lop-8" data-grade="8" style="--x:78.125%" aria-label="Lớp 8">8</a>
+              <a class="gbtn" href="#lop-9" data-grade="9" style="--x:87.5%" aria-label="Lớp 9">9</a>
+            </div>
+
+            <svg class="map__svg" viewBox="0 0 1200 320" role="img" aria-label="Bản đồ lộ trình: iLEAD lớp 1 đến 5, iPass lớp 3 đến 9, iGlobal lớp 6 đến 9, Tiếng Trung lớp 6 đến 9">
+              <text class="map__axis" x="96" y="40" text-anchor="end">LỚP</text>
+              <g class="guides"><line data-g="1" x1="150" y1="62" x2="150" y2="300"/><line data-g="2" x1="262.5" y1="62" x2="262.5" y2="300"/><line data-g="3" x1="375" y1="62" x2="375" y2="300"/><line data-g="4" x1="487.5" y1="62" x2="487.5" y2="300"/><line data-g="5" x1="600" y1="62" x2="600" y2="300"/><line data-g="6" x1="712.5" y1="62" x2="712.5" y2="300"/><line data-g="7" x1="825" y1="62" x2="825" y2="300"/><line data-g="8" x1="937.5" y1="62" x2="937.5" y2="300"/><line data-g="9" x1="1050" y1="62" x2="1050" y2="300"/></g>
+              <a class="mline" href="#card-ilead" data-line="ilead" data-from="1" data-to="5" style="--m:#F2A93B;--i:0" aria-label="Tuyến iLEAD, lớp 1 đến 5, đích Pre-B1">
+                <path class="mline__path" pathLength="1" d="M114 128 L150 92 H640"/>
+                <g class="mline__st"><circle cx="150" cy="92" r="8"/><circle cx="262.5" cy="92" r="8"/><circle cx="375" cy="92" r="8"/><circle cx="487.5" cy="92" r="8"/><circle cx="600" cy="92" r="8"/></g>
+                <text class="mline__name" x="104" y="134" text-anchor="end">iLEAD</text>
+                <g class="mline__end"><rect x="640" y="76" width="92" height="32" rx="16"/><text x="686" y="97.5" text-anchor="middle">Pre-B1</text></g>
+              </a>
+              <a class="mline" href="#card-ipass" data-line="ipass" data-from="3" data-to="9" style="--m:#2CC4AE;--i:1" aria-label="Tuyến iPass, lớp 3 đến 9, đích A2+">
+                <path class="mline__path" pathLength="1" d="M339 186 L375 150 H1090"/>
+                <g class="mline__st"><circle cx="375" cy="150" r="8"/><circle cx="487.5" cy="150" r="8"/><circle cx="600" cy="150" r="8"/><circle cx="712.5" cy="150" r="8"/><circle cx="825" cy="150" r="8"/><circle cx="937.5" cy="150" r="8"/><circle cx="1050" cy="150" r="8"/></g>
+                <text class="mline__name" x="329" y="192" text-anchor="end">iPass</text>
+                <g class="mline__end"><rect x="1090" y="134" width="92" height="32" rx="16"/><text x="1136" y="155.5" text-anchor="middle">A2+</text></g>
+              </a>
+              <a class="mline" href="#card-iglobal" data-line="iglobal" data-from="6" data-to="9" style="--m:#6C97FF;--i:2" aria-label="Tuyến iGlobal, lớp 6 đến 9, đích B2">
+                <path class="mline__path" pathLength="1" d="M676.5 244 L712.5 208 H1090"/>
+                <g class="mline__st"><circle cx="712.5" cy="208" r="8"/><circle cx="825" cy="208" r="8"/><circle cx="937.5" cy="208" r="8"/><circle cx="1050" cy="208" r="8"/></g>
+                <text class="mline__name" x="666.5" y="250" text-anchor="end">iGlobal</text>
+                <g class="mline__end"><rect x="1090" y="192" width="92" height="32" rx="16"/><text x="1136" y="213.5" text-anchor="middle">B2</text></g>
+              </a>
+              <a class="mline" href="#card-chinese" data-line="chinese" data-from="6" data-to="9" style="--m:#FF5C7A;--i:3" aria-label="Tuyến Tiếng Trung, lớp 6 đến 9, đích HSK5">
+                <path class="mline__path" pathLength="1" d="M676.5 302 L712.5 266 H1090"/>
+                <g class="mline__st"><circle cx="712.5" cy="266" r="8"/><circle cx="825" cy="266" r="8"/><circle cx="937.5" cy="266" r="8"/><circle cx="1050" cy="266" r="8"/></g>
+                <text class="mline__name" x="666.5" y="308" text-anchor="end">Tiếng Trung</text>
+                <g class="mline__end"><rect x="1090" y="250" width="92" height="32" rx="16"/><text x="1136" y="271.5" text-anchor="middle">HSK5</text></g>
+              </a>
+            </svg>
+          </div>
         </div>
       </div>
       <div class="hero__strip" aria-hidden="true"><i style="background:#D98E00"></i><i style="background:#0E9682"></i><i style="background:#2B5FE8"></i><i style="background:#CF2340"></i></div>
@@ -155,9 +197,11 @@
     <!-- ===================== 3. 4 CHƯƠNG TRÌNH ===================== -->
     <section class="section section--programs" id="chuong-trinh">
       <div class="container">
-        <header class="section-head reveal">
-          <p class="eyebrow">YOUR LEARNING JOURNEY</p>
-          <h2 class="section-title">Mỗi mục tiêu học tập. Một hành trình phù hợp</h2>
+        <header class="section-head section-head--split reveal">
+          <div>
+            <p class="eyebrow">YOUR LEARNING JOURNEY</p>
+            <h2 class="section-title">Mỗi mục tiêu học tập.<br>Một hành trình phù hợp</h2>
+          </div>
           <p class="section-desc">Bấm vào chương trình ba mẹ quan tâm để xem chi tiết lộ trình và đăng ký đánh giá năng lực miễn phí.</p>
         </header>
 
@@ -166,45 +210,33 @@
           <button class="grade-banner__btn" id="grade-clear" type="button">Xem tất cả</button>
         </div>
 
-        <div class="prog-grid">
+        <div class="panels reveal" id="panels">
 
           <!-- iLEAD -->
-          <article class="prog-card reveal" id="card-ilead" data-program="ilead" data-grade-from="1" data-grade-to="5" style="--c:#D98E00;--c-ink:#8A5A00;--c-btn:#D98E00;--c-btn-text:#0B1D4D">
+          <article class="prog-card is-active" id="card-ilead" data-program="ilead" data-grade-from="1" data-grade-to="5" style="--c:#D98E00;--c-ink:#8A5A00;--c-btn:#D98E00;--c-btn-text:#0B1D4D;--c-lite:#F2A93B">
             <div class="prog-card__media">
-              <img src="assets/img/prog-ilead.webp" srcset="assets/img/prog-ilead-640.webp 640w, assets/img/prog-ilead.webp 1280w" sizes="(min-width: 900px) 560px, 100vw" width="1280" height="720" loading="lazy" decoding="async" alt="Nhóm học sinh tiểu học vui vẻ học tiếng Anh qua trò chơi và đóng vai">
-              <span class="prog-card__match" hidden></span>
+              <img src="assets/img/prog-ilead.webp" srcset="assets/img/prog-ilead-640.webp 640w, assets/img/prog-ilead.webp 1280w" sizes="(min-width: 1180px) 520px, 100vw" width="1280" height="720" loading="lazy" decoding="async" alt="Nhóm học sinh tiểu học vui vẻ học tiếng Anh qua trò chơi và đóng vai">
             </div>
-            <div class="prog-card__body">
+            <div class="prog-card__head">
+              <span class="prog-card__match" hidden></span>
               <p class="prog-card__label">Tiếng Anh · Tiểu học</p>
               <h3 class="prog-card__name">iLEAD</h3>
               <p class="prog-card__slogan">Learn today, Lead tomorrow</p>
+              <p class="prog-card__range">Lớp 1 – 5</p>
+            </div>
+            <div class="prog-card__sheet">
               <p class="prog-card__for">Dành cho ba mẹ muốn con xây nền tiếng Anh vững chắc và tự tin giao tiếp ngay từ những năm tiểu học.</p>
-
               <div class="prog-meta">
-                <div class="prog-meta__col">
-                  <p class="prog-meta__title">LỚP PHÙ HỢP</p>
-                  <div class="grades" role="img" aria-label="Phù hợp lớp 1 đến lớp 5">
-                    <i class="on">1</i><i class="on">2</i><i class="on">3</i><i class="on">4</i><i class="on">5</i><i>6</i><i>7</i><i>8</i><i>9</i>
-                  </div>
-                  <p class="prog-meta__value">Lớp 1 – 5</p>
-                </div>
-                <div class="prog-meta__col">
-                  <p class="prog-meta__title">CHUẨN ĐẦU RA CEFR</p>
-                  <div class="levels" role="img" aria-label="Chuẩn đầu ra CEFR tăng dần: Pre-A1, A1, A2, Pre-B1">
-                    <span style="--h:40%"><i></i><b>Pre-A1</b></span>
-                    <span style="--h:60%"><i></i><b>A1</b></span>
-                    <span style="--h:80%"><i></i><b>A2</b></span>
-                    <span style="--h:100%"><i></i><b>Pre-B1</b></span>
-                  </div>
-                </div>
+                <p class="prog-meta__title">LỚP PHÙ HỢP <b>Lớp 1 – 5</b></p>
+                <div class="grades" role="img" aria-label="Phù hợp lớp 1 đến lớp 5"><i class="on">1</i><i class="on">2</i><i class="on">3</i><i class="on">4</i><i class="on">5</i><i>6</i><i>7</i><i>8</i><i>9</i></div>
+                <p class="prog-meta__title">CHUẨN ĐẦU RA CEFR</p>
+                <ol class="track" aria-label="Chuẩn đầu ra CEFR tăng dần"><li>Pre-A1</li><li>A1</li><li>A2</li><li>Pre-B1</li></ol>
               </div>
-
               <ul class="prog-points">
                 <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Lộ trình 4 chặng theo khung tham chiếu Châu Âu, đánh giá tiến độ thường xuyên</li>
                 <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Học qua trò chơi, câu chuyện, đóng vai; AI luyện phát âm chuẩn bản xứ tại nhà</li>
                 <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Đạt kiểm định của tổ chức Cognia, Hoa Kỳ</li>
               </ul>
-
               <div class="prog-card__foot">
                 <a class="btn btn--prog" href="https://ileadonline.ismart.edu.vn/" target="_blank" rel="noopener" data-track="program_click" data-program="ilead">Xem chương trình iLEAD <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a>
                 <span class="prog-card__domain">ileadonline.ismart.edu.vn</span>
@@ -213,40 +245,30 @@
           </article>
 
           <!-- iPass -->
-          <article class="prog-card reveal" id="card-ipass" data-program="ipass" data-grade-from="3" data-grade-to="9" style="--c:#0E9682;--c-ink:#0B7F6E;--c-btn:#0B7F6E;--c-btn-text:#FFFFFF">
+          <article class="prog-card" id="card-ipass" data-program="ipass" data-grade-from="3" data-grade-to="9" style="--c:#0E9682;--c-ink:#0B7F6E;--c-btn:#0B7F6E;--c-btn-text:#FFFFFF;--c-lite:#2CC4AE">
             <div class="prog-card__media">
-              <img src="assets/img/prog-ipass.webp" srcset="assets/img/prog-ipass-640.webp 640w, assets/img/prog-ipass.webp 1280w" sizes="(min-width: 900px) 560px, 100vw" width="1280" height="720" loading="lazy" decoding="async" alt="Học sinh trung học cơ sở tự tin ôn bài với sách giáo khoa và laptop">
-              <span class="prog-card__match" hidden></span>
+              <img src="assets/img/prog-ipass.webp" srcset="assets/img/prog-ipass-640.webp 640w, assets/img/prog-ipass.webp 1280w" sizes="(min-width: 1180px) 520px, 100vw" width="1280" height="720" loading="lazy" decoding="async" alt="Học sinh trung học cơ sở tự tin ôn bài với sách giáo khoa và laptop">
             </div>
-            <div class="prog-card__body">
+            <div class="prog-card__head">
+              <span class="prog-card__match" hidden></span>
               <p class="prog-card__label">Tiếng Anh · Bám sát SGK</p>
               <h3 class="prog-card__name">iPass</h3>
               <p class="prog-card__slogan">Pass hôm nay, Passport ngày mai</p>
+              <p class="prog-card__range">Lớp 3 – 9</p>
+            </div>
+            <div class="prog-card__sheet">
               <p class="prog-card__for">Dành cho ba mẹ muốn con học chắc kiến thức trên lớp, làm bài hiệu quả và nâng điểm kiểm tra.</p>
-
               <div class="prog-meta">
-                <div class="prog-meta__col">
-                  <p class="prog-meta__title">LỚP PHÙ HỢP</p>
-                  <div class="grades" role="img" aria-label="Phù hợp lớp 3 đến lớp 9">
-                    <i>1</i><i>2</i><i class="on">3</i><i class="on">4</i><i class="on">5</i><i class="on">6</i><i class="on">7</i><i class="on">8</i><i class="on">9</i>
-                  </div>
-                  <p class="prog-meta__value">Lớp 3 – 9</p>
-                </div>
-                <div class="prog-meta__col">
-                  <p class="prog-meta__title">NĂNG LỰC CUỐI CẤP</p>
-                  <div class="levels levels--wide" role="img" aria-label="Năng lực cuối cấp: A1+ ở Tiểu học, A2+ ở THCS">
-                    <span style="--h:60%"><i></i><b>A1+ <small>(Tiểu học)</small></b></span>
-                    <span style="--h:100%"><i></i><b>A2+ <small>(THCS)</small></b></span>
-                  </div>
-                </div>
+                <p class="prog-meta__title">LỚP PHÙ HỢP <b>Lớp 3 – 9</b></p>
+                <div class="grades" role="img" aria-label="Phù hợp lớp 3 đến lớp 9"><i>1</i><i>2</i><i class="on">3</i><i class="on">4</i><i class="on">5</i><i class="on">6</i><i class="on">7</i><i class="on">8</i><i class="on">9</i></div>
+                <p class="prog-meta__title">NĂNG LỰC CUỐI CẤP</p>
+                <ol class="track" aria-label="Năng lực cuối cấp"><li>A1+ <small>(Tiểu học)</small></li><li>A2+ <small>(THCS)</small></li></ol>
               </div>
-
               <ul class="prog-points">
                 <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Bám sát chương trình Global Success và cấu trúc bài kiểm tra trên lớp</li>
                 <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Mô hình 2P: Performance (học chắc, nâng điểm) song hành Proficiency (giao tiếp tự tin)</li>
                 <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Speak Up Day 2 tháng một lần: thuyết trình, giao tiếp với giáo viên nước ngoài</li>
               </ul>
-
               <div class="prog-card__foot">
                 <a class="btn btn--prog" href="https://ipass.ismart.edu.vn/" target="_blank" rel="noopener" data-track="program_click" data-program="ipass">Xem chương trình iPass <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a>
                 <span class="prog-card__domain">ipass.ismart.edu.vn</span>
@@ -255,42 +277,30 @@
           </article>
 
           <!-- iGlobal -->
-          <article class="prog-card reveal" id="card-iglobal" data-program="iglobal" data-grade-from="6" data-grade-to="9" style="--c:#2B5FE8;--c-ink:#2B5FE8;--c-btn:#2B5FE8;--c-btn-text:#FFFFFF">
+          <article class="prog-card" id="card-iglobal" data-program="iglobal" data-grade-from="6" data-grade-to="9" style="--c:#2B5FE8;--c-ink:#2B5FE8;--c-btn:#2B5FE8;--c-btn-text:#FFFFFF;--c-lite:#6C97FF">
             <div class="prog-card__media">
-              <img src="assets/img/prog-iglobal.webp" srcset="assets/img/prog-iglobal-640.webp 640w, assets/img/prog-iglobal.webp 1280w" sizes="(min-width: 900px) 560px, 100vw" width="1280" height="720" loading="lazy" decoding="async" alt="Học sinh trung học cơ sở tự tin thuyết trình tiếng Anh trước webcam">
-              <span class="prog-card__match" hidden></span>
+              <img src="assets/img/prog-iglobal.webp" srcset="assets/img/prog-iglobal-640.webp 640w, assets/img/prog-iglobal.webp 1280w" sizes="(min-width: 1180px) 520px, 100vw" width="1280" height="720" loading="lazy" decoding="async" alt="Học sinh trung học cơ sở tự tin thuyết trình tiếng Anh trước webcam">
             </div>
-            <div class="prog-card__body">
+            <div class="prog-card__head">
+              <span class="prog-card__match" hidden></span>
               <p class="prog-card__label">Tiếng Anh · THCS chuẩn quốc tế</p>
               <h3 class="prog-card__name">iGlobal</h3>
               <p class="prog-card__slogan">Learn → Use → Master → Go Global</p>
+              <p class="prog-card__range">Lớp 6 – 9</p>
+            </div>
+            <div class="prog-card__sheet">
               <p class="prog-card__for">Dành cho ba mẹ muốn con làm chủ tiếng Anh theo chuẩn đầu ra quốc tế, sẵn sàng cho IELTS và môi trường hội nhập.</p>
-
               <div class="prog-meta">
-                <div class="prog-meta__col">
-                  <p class="prog-meta__title">LỚP PHÙ HỢP</p>
-                  <div class="grades" role="img" aria-label="Phù hợp lớp 6 đến lớp 9">
-                    <i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i class="on">6</i><i class="on">7</i><i class="on">8</i><i class="on">9</i>
-                  </div>
-                  <p class="prog-meta__value">Lớp 6 – 9</p>
-                </div>
-                <div class="prog-meta__col">
-                  <p class="prog-meta__title">CHUẨN ĐẦU RA CEFR</p>
-                  <div class="levels" role="img" aria-label="Chuẩn đầu ra CEFR tăng dần: A1, A2, B1, B2">
-                    <span style="--h:40%"><i></i><b>A1</b></span>
-                    <span style="--h:60%"><i></i><b>A2</b></span>
-                    <span style="--h:80%"><i></i><b>B1</b></span>
-                    <span style="--h:100%"><i></i><b>B2</b></span>
-                  </div>
-                </div>
+                <p class="prog-meta__title">LỚP PHÙ HỢP <b>Lớp 6 – 9</b></p>
+                <div class="grades" role="img" aria-label="Phù hợp lớp 6 đến lớp 9"><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i class="on">6</i><i class="on">7</i><i class="on">8</i><i class="on">9</i></div>
+                <p class="prog-meta__title">CHUẨN ĐẦU RA CEFR</p>
+                <ol class="track" aria-label="Chuẩn đầu ra CEFR tăng dần"><li>A1</li><li>A2</li><li>B1</li><li>B2</li></ol>
               </div>
-
               <ul class="prog-points">
                 <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Đánh giá đầu vào, xếp lớp theo năng lực thực tế với lộ trình 4 cấp độ</li>
                 <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>AI sửa phát âm tức thì, kho hơn 10.000 bài giảng sẵn sàng 24/7</li>
                 <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Xây nền tảng cho các chứng chỉ quốc tế; đạt kiểm định Cognia, Hoa Kỳ</li>
               </ul>
-
               <div class="prog-card__foot">
                 <a class="btn btn--prog" href="https://iglobal.ismart.edu.vn/" target="_blank" rel="noopener" data-track="program_click" data-program="iglobal">Xem chương trình iGlobal <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a>
                 <span class="prog-card__domain">iglobal.ismart.edu.vn</span>
@@ -299,43 +309,30 @@
           </article>
 
           <!-- Tiếng Trung THCS -->
-          <article class="prog-card reveal" id="card-chinese" data-program="chinese" data-grade-from="6" data-grade-to="9" style="--c:#CF2340;--c-ink:#CF2340;--c-btn:#CF2340;--c-btn-text:#FFFFFF">
+          <article class="prog-card" id="card-chinese" data-program="chinese" data-grade-from="6" data-grade-to="9" style="--c:#CF2340;--c-ink:#CF2340;--c-btn:#CF2340;--c-btn-text:#FFFFFF;--c-lite:#FF5C7A">
             <div class="prog-card__media">
-              <img src="assets/img/prog-chinese.webp" srcset="assets/img/prog-chinese-640.webp 640w, assets/img/prog-chinese.webp 1280w" sizes="(min-width: 900px) 560px, 100vw" width="1280" height="720" loading="lazy" decoding="async" alt="Học sinh trung học cơ sở học tiếng Trung trực tuyến và luyện viết chữ Hán bằng bút lông">
-              <span class="prog-card__match" hidden></span>
+              <img src="assets/img/prog-chinese.webp" srcset="assets/img/prog-chinese-640.webp 640w, assets/img/prog-chinese.webp 1280w" sizes="(min-width: 1180px) 520px, 100vw" width="1280" height="720" loading="lazy" decoding="async" alt="Học sinh trung học cơ sở học tiếng Trung trực tuyến và luyện viết chữ Hán bằng bút lông">
             </div>
-            <div class="prog-card__body">
+            <div class="prog-card__head">
+              <span class="prog-card__match" hidden></span>
               <p class="prog-card__label">Tiếng Trung · THCS</p>
               <h3 class="prog-card__name">Tiếng Trung <span class="zh" lang="zh">中文</span></h3>
               <p class="prog-card__slogan">Tự tin giao tiếp, vững lộ trình</p>
+              <p class="prog-card__range">Lớp 6 – 9</p>
+            </div>
+            <div class="prog-card__sheet">
               <p class="prog-card__for">Dành cho ba mẹ muốn con có thêm ngoại ngữ thứ hai, chinh phục chứng chỉ HSK và mở rộng cơ hội học bổng.</p>
-
               <div class="prog-meta">
-                <div class="prog-meta__col">
-                  <p class="prog-meta__title">LỚP PHÙ HỢP</p>
-                  <div class="grades" role="img" aria-label="Phù hợp lớp 6 đến lớp 9">
-                    <i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i class="on">6</i><i class="on">7</i><i class="on">8</i><i class="on">9</i>
-                  </div>
-                  <p class="prog-meta__value">Lớp 6 – 9</p>
-                </div>
-                <div class="prog-meta__col">
-                  <p class="prog-meta__title">LỘ TRÌNH HSK + HSKK</p>
-                  <div class="levels levels--five" role="img" aria-label="Lộ trình HSK và HSKK tăng dần: HSK1, HSK2, HSK3, HSK4, HSK5">
-                    <span style="--h:36%"><i></i><b>HSK1</b></span>
-                    <span style="--h:52%"><i></i><b>HSK2</b></span>
-                    <span style="--h:68%"><i></i><b>HSK3</b></span>
-                    <span style="--h:84%"><i></i><b>HSK4</b></span>
-                    <span style="--h:100%"><i></i><b>HSK5</b></span>
-                  </div>
-                </div>
+                <p class="prog-meta__title">LỚP PHÙ HỢP <b>Lớp 6 – 9</b></p>
+                <div class="grades" role="img" aria-label="Phù hợp lớp 6 đến lớp 9"><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i class="on">6</i><i class="on">7</i><i class="on">8</i><i class="on">9</i></div>
+                <p class="prog-meta__title">LỘ TRÌNH HSK + HSKK</p>
+                <ol class="track" aria-label="Lộ trình HSK và HSKK tăng dần"><li>HSK1</li><li>HSK2</li><li>HSK3</li><li>HSK4</li><li>HSK5</li></ol>
               </div>
-
               <ul class="prog-points">
                 <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>5 cấp độ: Khởi động, Tăng tốc, Bứt phá, Vươn xa, Thành công</li>
                 <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Học online lớp quy mô nhỏ, giáo viên giàu kinh nghiệm theo sát từng học sinh</li>
                 <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Mạng lưới đối tác trường học, đại học tại Trung Quốc</li>
               </ul>
-
               <div class="prog-card__foot">
                 <a class="btn btn--prog" href="https://chinese.ismart.edu.vn/" target="_blank" rel="noopener" data-track="program_click" data-program="chinese">Xem chương trình Tiếng Trung <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a>
                 <span class="prog-card__domain">chinese.ismart.edu.vn</span>
@@ -348,21 +345,21 @@
     </section>
 
     <!-- ===================== 4. VỀ iSMART ===================== -->
-    <section class="section section--white" id="ve-ismart">
+    <section class="section section--white about-sec" id="ve-ismart">
       <div class="container">
         <div class="about">
           <div class="about__copy reveal">
             <p class="eyebrow">VỀ iSMART EDUCATION</p>
-            <h2 class="section-title">Hơn 15 năm tiên phong dạy tiếng Anh qua Toán và Khoa học</h2>
+            <h2 class="about__title">Hơn <em>15 năm</em> tiên phong dạy tiếng Anh qua Toán và Khoa học</h2>
             <p class="about__text">iSMART bắt đầu dạy tiếng Anh qua Toán và Khoa học tại Việt Nam từ năm 2013. Từ lớp học trong trường phổ thông, iSMART mở rộng sang bài giảng số, trường học trực tuyến và các mô hình kết nối trực tiếp – trực tuyến, đồng hành cùng hơn 200.000 học sinh tại hơn 700 trường trên cả nước.</p>
             <p class="about__motto">Bứt phá giới hạn – Kiến tạo tương lai</p>
             <p class="about__note">Công ty Cổ phần Giáo dục iSMART · Thành viên Tổ chức Giáo dục EQuest</p>
           </div>
 
           <div class="about__visual reveal">
-            <img class="av av--1" src="assets/img/about-1.webp" srcset="assets/img/about-1-640.webp 640w, assets/img/about-1.webp 1200w" sizes="(min-width: 1024px) 440px, 78vw" width="1200" height="900" loading="lazy" decoding="async" alt="Giáo viên hướng dẫn học sinh làm thí nghiệm khoa học trong lớp học tiếng Anh qua Toán và Khoa học">
-            <img class="av av--2" src="assets/img/about-2.webp" srcset="assets/img/about-2-320.webp 320w, assets/img/about-2.webp 640w" sizes="(min-width: 1024px) 200px, 36vw" width="640" height="640" loading="lazy" decoding="async" alt="Giáo viên trẻ đeo tai nghe đang dạy học trực tuyến">
-            <img class="av av--3" src="assets/img/about-3.webp" srcset="assets/img/about-3-320.webp 320w, assets/img/about-3.webp 640w" sizes="(min-width: 1024px) 170px, 30vw" width="640" height="640" loading="lazy" decoding="async" alt="Phụ huynh ngồi cạnh con cùng xem bài học trên laptop">
+            <img class="av av--1" src="assets/img/about-1.webp" srcset="assets/img/about-1-640.webp 640w, assets/img/about-1.webp 1200w" sizes="(min-width: 1024px) 520px, 78vw" width="1200" height="900" loading="lazy" decoding="async" alt="Giáo viên hướng dẫn học sinh làm thí nghiệm khoa học trong lớp học tiếng Anh qua Toán và Khoa học">
+            <img class="av av--2" src="assets/img/about-2.webp" srcset="assets/img/about-2-320.webp 320w, assets/img/about-2.webp 640w" sizes="(min-width: 1024px) 220px, 36vw" width="640" height="640" loading="lazy" decoding="async" alt="Giáo viên trẻ đeo tai nghe đang dạy học trực tuyến">
+            <img class="av av--3" src="assets/img/about-3.webp" srcset="assets/img/about-3-320.webp 320w, assets/img/about-3.webp 640w" sizes="(min-width: 1024px) 190px, 30vw" width="640" height="640" loading="lazy" decoding="async" alt="Phụ huynh ngồi cạnh con cùng xem bài học trên laptop">
           </div>
         </div>
 
@@ -393,36 +390,38 @@
     </section>
 
     <!-- ===================== 5. GIÁ TRỊ CỐT LÕI LEADS ===================== -->
-    <section class="section" id="gia-tri-cot-loi">
+    <section class="section leads-sec" id="gia-tri-cot-loi">
       <div class="container">
-        <header class="section-head reveal">
-          <p class="eyebrow">GIÁ TRỊ CỐT LÕI</p>
-          <h2 class="section-title section-title--leads">LEADS</h2>
+        <header class="section-head section-head--split reveal">
+          <div>
+            <p class="eyebrow">GIÁ TRỊ CỐT LÕI</p>
+            <h2 class="section-title">LEADS</h2>
+          </div>
           <p class="section-desc">Năm giá trị định hướng cách đội ngũ iSMART làm việc, giảng dạy và đồng hành cùng học sinh.</p>
         </header>
 
-        <ul class="leads">
-          <li class="leads__item reveal" style="--c:#D98E00">
+        <ul class="leads reveal">
+          <li class="leads__item" style="--c:#D98E00">
             <span class="leads__letter" aria-hidden="true">L</span>
             <h3><span class="leads__en">LEARNING</span><span class="leads__vi">Học tập</span></h3>
             <p>Không ngừng học hỏi để nâng cao kiến thức, năng lực và mở ra cơ hội phát triển.</p>
           </li>
-          <li class="leads__item reveal" style="--c:#0E9682">
+          <li class="leads__item" style="--c:#0E9682">
             <span class="leads__letter" aria-hidden="true">E</span>
             <h3><span class="leads__en">EXCELLENCE</span><span class="leads__vi">Xuất sắc</span></h3>
             <p>Đội ngũ chuyên nghiệp, tư duy đúng đắn, kỹ năng thành thạo để đạt mục tiêu chung.</p>
           </li>
-          <li class="leads__item reveal" style="--c:#2B5FE8">
+          <li class="leads__item" style="--c:#2B5FE8">
             <span class="leads__letter" aria-hidden="true">A</span>
             <h3><span class="leads__en">ACTION</span><span class="leads__vi">Hành động</span></h3>
             <p>Sẵn sàng hành động, tạo điều kiện hiện thực hoá ý tưởng và đề xuất.</p>
           </li>
-          <li class="leads__item reveal" style="--c:#CF2340">
+          <li class="leads__item" style="--c:#CF2340">
             <span class="leads__letter" aria-hidden="true">D</span>
             <h3><span class="leads__en">DEDICATION</span><span class="leads__vi">Cống hiến</span></h3>
             <p>Tận tụy, không bỏ cuộc, luôn tìm giải pháp tốt nhất cho mọi vấn đề.</p>
           </li>
-          <li class="leads__item reveal" style="--c:#0B1D4D">
+          <li class="leads__item" style="--c:#0B1D4D">
             <span class="leads__letter" aria-hidden="true">S</span>
             <h3><span class="leads__en">SCALABILITY</span><span class="leads__vi">Mở rộng</span></h3>
             <p>Không ngừng lớn mạnh để mang giải pháp giáo dục đạt chuẩn đến học sinh, giáo viên cả nước.</p>
@@ -433,44 +432,52 @@
 
     <!-- ===================== 6. THÀNH TỰU ===================== -->
     <section class="section section--white" id="thanh-tuu">
-      <div class="container">
-        <header class="section-head reveal">
+      <div class="container awards-wrap">
+        <header class="awards-head reveal">
           <p class="eyebrow">THÀNH TỰU</p>
           <h2 class="section-title">Chất lượng được kiểm định trong nước và quốc tế</h2>
         </header>
 
-        <div class="awards">
-          <article class="award reveal">
-            <div class="award__top">
-              <span class="award__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+        <ol class="awards">
+          <li class="award reveal">
+            <span class="award__no" aria-hidden="true">01</span>
+            <div class="award__body">
+              <h3>Kiểm định Cognia, Hoa Kỳ</h3>
+              <p>Đạt kiểm định chất lượng toàn diện của một trong những tổ chức kiểm định giáo dục uy tín nhất thế giới.</p>
+            </div>
+            <span class="award__mark">
+              <svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>
               <img class="logo-slot logo-slot--award" id="logo-cognia" src="assets/logos/logo-cognia.svg" alt="Logo Cognia" width="120" height="48" loading="lazy">
+            </span>
+          </li>
+          <li class="award reveal">
+            <span class="award__no" aria-hidden="true">02</span>
+            <div class="award__body">
+              <h3>Danh hiệu Sao Khuê</h3>
+              <p>Sản phẩm công nghệ xuất sắc trong lĩnh vực Giáo dục – Đào tạo tại Việt Nam.</p>
             </div>
-            <h3>Kiểm định Cognia, Hoa Kỳ</h3>
-            <p>Đạt kiểm định chất lượng toàn diện của một trong những tổ chức kiểm định giáo dục uy tín nhất thế giới.</p>
-          </article>
-          <article class="award reveal">
-            <div class="award__top">
-              <span class="award__icon"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <span class="award__mark">
+              <svg class="icon" aria-hidden="true"><use href="#i-star"/></svg>
               <img class="logo-slot logo-slot--award" id="logo-sao-khue" src="assets/logos/logo-sao-khue.svg" alt="Logo Sao Khuê" width="120" height="48" loading="lazy">
+            </span>
+          </li>
+          <li class="award reveal">
+            <span class="award__no" aria-hidden="true">03</span>
+            <div class="award__body">
+              <h3>Kiểm định bài giảng số</h3>
+              <p>Chương trình bài giảng số đầu tiên và duy nhất đạt tiêu chuẩn kiểm định của Viện Nghiên cứu Giáo dục, ĐH Sư phạm TP.HCM.</p>
             </div>
-            <h3>Danh hiệu Sao Khuê</h3>
-            <p>Sản phẩm công nghệ xuất sắc trong lĩnh vực Giáo dục – Đào tạo tại Việt Nam.</p>
-          </article>
-          <article class="award reveal">
-            <div class="award__top">
-              <span class="award__icon"><svg class="icon" aria-hidden="true"><use href="#i-doc"/></svg></span>
+            <span class="award__mark"><svg class="icon" aria-hidden="true"><use href="#i-doc"/></svg></span>
+          </li>
+          <li class="award reveal">
+            <span class="award__no" aria-hidden="true">04</span>
+            <div class="award__body">
+              <h3>iSMART Online School</h3>
+              <p>Trường học trực tuyến dạy tiếng Anh qua Toán và Khoa học lớn nhất Việt Nam.</p>
             </div>
-            <h3>Kiểm định bài giảng số</h3>
-            <p>Chương trình bài giảng số đầu tiên và duy nhất đạt tiêu chuẩn kiểm định của Viện Nghiên cứu Giáo dục, ĐH Sư phạm TP.HCM.</p>
-          </article>
-          <article class="award reveal">
-            <div class="award__top">
-              <span class="award__icon"><svg class="icon" aria-hidden="true"><use href="#i-cap"/></svg></span>
-            </div>
-            <h3>iSMART Online School</h3>
-            <p>Trường học trực tuyến dạy tiếng Anh qua Toán và Khoa học lớn nhất Việt Nam.</p>
-          </article>
-        </div>
+            <span class="award__mark"><svg class="icon" aria-hidden="true"><use href="#i-cap"/></svg></span>
+          </li>
+        </ol>
       </div>
     </section>
 
@@ -486,10 +493,10 @@
           <article class="partner-block reveal">
             <p class="partner-block__label">Tổ chức thành viên</p>
             <h3>EQuest Education</h3>
-            <p class="partner-block__text">iSMART là thành viên của Tổ chức Giáo dục EQuest từ năm 2013.</p>
             <ul class="logo-grid logo-grid--1">
               <li><img class="logo-slot" id="logo-equest" src="assets/logos/logo-equest.svg" alt="Logo EQuest Education" width="200" height="80" loading="lazy"><span>EQuest Education</span></li>
             </ul>
+            <p class="partner-block__text">iSMART là thành viên của Tổ chức Giáo dục EQuest từ năm 2013.</p>
           </article>
 
           <article class="partner-block reveal">
@@ -501,7 +508,7 @@
             </ul>
           </article>
 
-          <article class="partner-block partner-block--wide reveal">
+          <article class="partner-block reveal">
             <p class="partner-block__label">Trường và tổ chức giáo dục</p>
             <h3>Đối tác tiêu biểu</h3>
             <ul class="logo-grid logo-grid--4">
@@ -517,10 +524,13 @@
 
     <!-- ===================== 8. LỜI KÊU GỌI CUỐI ===================== -->
     <section class="cta" id="lien-he">
+      <svg class="cta__merge" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 14 H420 C520 14 520 60 620 60 H1200" stroke="#F2A93B"/>
+        <path d="M0 44 H440 C520 44 530 60 620 60" stroke="#2CC4AE"/>
+        <path d="M0 76 H440 C520 76 530 60 620 60" stroke="#6C97FF"/>
+        <path d="M0 106 H420 C520 106 520 60 620 60" stroke="#FF5C7A"/>
+      </svg>
       <div class="container cta__inner">
-        <div class="cta__visual reveal">
-          <img src="assets/img/cta-family.webp" srcset="assets/img/cta-family-640.webp 640w, assets/img/cta-family.webp 1200w" sizes="(min-width: 1024px) 520px, 92vw" width="1200" height="900" loading="lazy" decoding="async" alt="Ba mẹ và con cùng nhìn laptop với vẻ hài lòng khi chọn được khóa học phù hợp">
-        </div>
         <div class="cta__copy reveal">
           <p class="eyebrow eyebrow--accent">THE NEXT STEP STARTS TODAY</p>
           <h2 class="cta__title">Một lựa chọn phù hợp hôm nay.<br><span class="accent">Một nền tảng vững vàng cho ngày mai.</span></h2>
@@ -536,6 +546,9 @@
               <a class="btn btn--ghost-light" href="https://ismart.edu.vn/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg>ismart.edu.vn</a>
             </div>
           </div>
+        </div>
+        <div class="cta__visual reveal">
+          <img src="assets/img/cta-family.webp" srcset="assets/img/cta-family-640.webp 640w, assets/img/cta-family.webp 1200w" sizes="(min-width: 1024px) 520px, 92vw" width="1200" height="900" loading="lazy" decoding="async" alt="Ba mẹ và con cùng nhìn laptop với vẻ hài lòng khi chọn được khóa học phù hợp">
         </div>
       </div>
     </section>

@@ -8,6 +8,7 @@
   var PHONE = '0967417895';
 
   window.dataLayer = window.dataLayer || [];
+  root.classList.add('js-panels'); // bật chế độ panel ngang (CSS chỉ áp dụng khi JS chạy)
 
   function $(sel, ctx) { return (ctx || doc).querySelector(sel); }
   function $$(sel, ctx) { return Array.prototype.slice.call((ctx || doc).querySelectorAll(sel)); }
@@ -54,14 +55,97 @@
   var bannerText = $('#grade-banner-text');
   var section = $('#chuong-trinh');
 
+  /* Panel chương trình: 1 panel mở, rê chuột / focus / bấm để đổi */
+  function setActive(card) {
+    if (!card || card.classList.contains('is-active')) return;
+    cards.forEach(function (c) { c.classList.toggle('is-active', c === card); });
+  }
+  cards.forEach(function (card) {
+    card.addEventListener('mouseenter', function () { setActive(card); });
+    card.addEventListener('focusin', function () { setActive(card); });
+    card.addEventListener('click', function () { setActive(card); });
+  });
+
+  /* Bản đồ tuyến ở hero */
+  var map = $('#route-map');
+  var lines = $$('.mline', map || doc);
+  var guides = $$('.guides line', map || doc);
+  var gbtns = $$('.gbtn', map || doc);
+  var scrollDelay = 0;
+
+  function paintMap(grade) {
+    if (!map) return;
+    map.classList.toggle('has-grade', grade !== null);
+    lines.forEach(function (ln) {
+      var from = parseInt(ln.getAttribute('data-from'), 10);
+      var to = parseInt(ln.getAttribute('data-to'), 10);
+      var match = grade !== null && grade >= from && grade <= to;
+      ln.classList.toggle('is-match', match);
+      $$('.mline__st circle', ln).forEach(function (c, i) {
+        c.classList.toggle('is-here', match && i === grade - from);
+      });
+    });
+    guides.forEach(function (g) {
+      g.classList.toggle('is-on', grade !== null && parseInt(g.getAttribute('data-g'), 10) === grade);
+    });
+  }
+  function markButtons() {
+    var grade = currentGrade();
+    gbtns.forEach(function (b) {
+      var on = parseInt(b.getAttribute('data-grade'), 10) === grade;
+      b.classList.toggle('is-on', on);
+      if (on) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current');
+    });
+  }
+  function clearGrade() {
+    if (window.history && history.replaceState) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    } else {
+      window.location.hash = '';
+    }
+    applyGrade(false);
+    updateProgramLinks();
+  }
+  gbtns.forEach(function (b) {
+    var g = parseInt(b.getAttribute('data-grade'), 10);
+    b.addEventListener('mouseenter', function () { paintMap(g); });
+    b.addEventListener('focus', function () { paintMap(g); });
+    b.addEventListener('mouseleave', function () { paintMap(currentGrade()); });
+    b.addEventListener('blur', function () { paintMap(currentGrade()); });
+    b.addEventListener('click', function (e) {
+      if (currentGrade() === g) { e.preventDefault(); clearGrade(); return; } // bấm lại để bỏ chọn
+      scrollDelay = 750; // cho ba mẹ kịp thấy các tuyến sáng lên rồi mới cuộn
+    });
+  });
+  lines.forEach(function (ln) {
+    ln.addEventListener('click', function () {
+      setActive(doc.getElementById('card-' + ln.getAttribute('data-line')));
+    });
+  });
+
+  /* Quầng sáng đi theo con trỏ ở hero */
+  var heroEl = $('#hero');
+  var glow = $('.hero__glow');
+  if (heroEl && glow && !reducedMotion()) {
+    heroEl.addEventListener('pointermove', function (e) {
+      var r = heroEl.getBoundingClientRect();
+      glow.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      glow.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    });
+  }
+
   function applyGrade(scroll) {
     var grade = currentGrade();
+    var firstMatch = null;
+    paintMap(grade);
+    markButtons();
     cards.forEach(function (card) {
       var from = parseInt(card.getAttribute('data-grade-from'), 10);
       var to = parseInt(card.getAttribute('data-grade-to'), 10);
       var match = grade !== null && grade >= from && grade <= to;
       var badge = $('.prog-card__match', card);
       card.classList.toggle('is-match', match);
+      if (match && !firstMatch) firstMatch = card;
       card.classList.toggle('is-dim', grade !== null && !match);
       if (badge) {
         badge.hidden = !match;
@@ -72,22 +156,19 @@
       banner.hidden = grade === null;
       if (grade !== null && bannerText) bannerText.textContent = 'Gợi ý chương trình cho con lớp ' + grade;
     }
+    if (firstMatch) setActive(firstMatch);
     if (grade !== null && scroll && section) {
-      section.scrollIntoView({ behavior: reducedMotion() ? 'auto' : 'smooth', block: 'start' });
+      var delay = scrollDelay;
+      scrollDelay = 0;
+      window.setTimeout(function () {
+        section.scrollIntoView({ behavior: reducedMotion() ? 'auto' : 'smooth', block: 'start' });
+      }, delay);
     }
   }
 
   var clearBtn = $('#grade-clear');
   if (clearBtn) {
-    clearBtn.addEventListener('click', function () {
-      if (window.history && history.replaceState) {
-        history.replaceState(null, '', window.location.pathname + window.location.search);
-      } else {
-        window.location.hash = '';
-      }
-      applyGrade(false);
-      updateProgramLinks();
-    });
+    clearBtn.addEventListener('click', clearGrade);
   }
 
   /* ---------- 4. UTM cho link sang 4 website chương trình ---------- */
