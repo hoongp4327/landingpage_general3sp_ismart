@@ -775,3 +775,25 @@ html.anim .reveal.is-in .at-spark { animation: htSpark 2.8s ease-in-out 1.2s inf
   .vm-card--text { padding: 48px 52px; }
 }
 @media (max-width: 899.98px) { .vm-card--img2 { order: 4; } }
+
+/* v14 – Tầm nhìn & Sứ mệnh: gọn hơn, cùng thang chữ với cả trang
+   (tiêu đề thẻ = cỡ tiêu đề thẻ Thành tựu/Chương trình ~28px; chữ nội dung 15–16px) */
+.vm-card { min-height: 0; }
+.vm-card--text { padding: 30px 28px; }
+.vm-card__title { margin-top: 0; font-size: 28px; line-height: 1.2; font-weight: 800; letter-spacing: 0; }
+.vm-card__statement { margin-top: 12px; font-size: 20px; line-height: 1.45; font-weight: 600; }
+.vm-card .mission-list { margin-top: 8px; }
+.vm-card .mission-list li { padding: 11px 0; gap: 14px; }
+.vm-card .mission-list__icon { width: 40px; height: 40px; }
+.vm-card .mission-list__icon .icon { width: 20px; height: 20px; }
+.vm-card .mission-list h3 { font-size: 16px; font-weight: 700; }
+.vm-card .mission-list p { font-size: 14.5px; line-height: 1.5; }
+.vm-card--img { min-height: 240px; }
+.vm-card--img img { object-position: 50% 35%; }
+@media (min-width: 900px) {
+  .vm-sec { padding: 88px 0; }
+  .vm-grid { grid-auto-rows: auto; gap: 16px; }
+  .vm-card { min-height: 0; }
+  .vm-card--text { padding: 34px 44px; }
+  .vm-card--img { min-height: 260px; }
+}
