@@ -738,3 +738,40 @@ html.anim .reveal.is-in .at-spark { animation: htSpark 2.8s ease-in-out 1.2s inf
   .about__copy { position: relative; z-index: 2; }
   .about__visual { width: calc(100% + 110px); margin: 0 -24px 0 -86px; }
 }
+
+/* =========================================================
+   v13 – TẦM NHÌN & SỨ MỆNH: LƯỚI 2×2 NỀN TỐI, VIỀN NEON
+   ========================================================= */
+.vm-sec { position: relative; padding: 72px 0; color: #fff; overflow: hidden;
+  background:
+    radial-gradient(700px 420px at 12% 18%, rgba(43, 95, 232, .28), transparent 62%),
+    radial-gradient(640px 420px at 90% 85%, rgba(245, 132, 49, .18), transparent 62%),
+    linear-gradient(160deg, #060B2E 0%, #0B1446 55%, #120E3A 100%); }
+.vm-grid { display: grid; gap: 18px; }
+.vm-card { position: relative; margin: 0; border-radius: 18px; overflow: hidden; min-height: 300px; }
+/* Thẻ chữ: nền tối trong mờ + viền gradient xanh → cam mảnh */
+.vm-card--text { padding: 36px 32px; background: linear-gradient(160deg, rgba(20, 28, 80, .82), rgba(10, 14, 48, .9)); display: flex; flex-direction: column; justify-content: center; }
+.vm-card--text::before { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1.5px; pointer-events: none;
+  background: linear-gradient(135deg, rgba(80, 150, 255, .9), rgba(80, 150, 255, .15) 40%, rgba(245, 132, 49, .15) 60%, rgba(245, 132, 49, .85));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
+.vm-card__label { font-size: 12.5px; font-weight: 800; letter-spacing: .18em; color: var(--accent); }
+.vm-card__title { margin-top: 6px; font-size: clamp(2rem, 3.6vw, 3.1rem); line-height: 1.1; font-weight: 800; letter-spacing: -.01em; color: #fff; }
+.vm-card__statement { margin-top: 18px; max-width: 30em; font-family: var(--serif); font-style: italic; font-weight: 600; font-size: clamp(1.25rem, 2vw, 1.7rem); line-height: 1.4; color: rgba(255, 255, 255, .92); }
+.vm-card .mission-list { margin-top: 14px; gap: 0; }
+.vm-card .mission-list li { padding: 14px 0; border-top: 1px solid rgba(255, 255, 255, .12); }
+.vm-card .mission-list li:first-child { border-top: 0; }
+.vm-card .mission-list__icon { background: rgba(245, 132, 49, .14); color: var(--accent); box-shadow: inset 0 0 0 1px rgba(245, 132, 49, .4); }
+.vm-card .mission-list h3 { color: #fff; }
+.vm-card .mission-list p { color: rgba(255, 255, 255, .74); }
+/* Thẻ ảnh */
+.vm-card--img { background: #0B1446; }
+.vm-card--img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .9s var(--ease); }
+.vm-card--img:hover img { transform: scale(1.04); }
+.vm-card--img::after { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .08); pointer-events: none; }
+@media (min-width: 900px) {
+  .vm-sec { padding: 104px 0; }
+  .vm-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .vm-card { min-height: 380px; }
+  .vm-card--text { padding: 48px 52px; }
+}
+@media (max-width: 899.98px) { .vm-card--img2 { order: 4; } }

@@ -94,3 +94,18 @@ Mẫu prompt (iPass; 3 ảnh còn lại cùng cấu trúc, đổi nhân vật/b�
 
 Mẫu prompt (Tiếng Trung, bản dọc):
 > Tall vertical photorealistic image, online Chinese language learning with a strong festive red theme. A cheerful 13-year-old Vietnamese middle school boy in a denim jacket over a bright red t-shirt sits on top of a giant glossy smartphone lying at an angle, hugging a stack of orange and red books, smiling confidently. His face is centered horizontally in the upper half of the frame, about 30 to 38 percent from the top, fully visible. Background: rich red and crimson gradient with soft golden light, a few glowing red paper lanterns with gold tassels, subtle golden cloud patterns, and a few floating glossy 3D red speech bubbles and a red headphone icon that are blank with no characters. The lower 40 percent of the frame is calm: the giant smartphone screen glowing softly and his sneakers, slightly out of focus. Warm, energetic, premium, red and gold dominant with a touch of navy. No text, no letters, no Chinese characters, no logos, no watermark. Natural, anatomically correct hands.
+
+## Bổ sung – ảnh Tầm nhìn / Sứ mệnh (lưới 2×2 nền tối)
+
+Higgsfield `gpt_image_2_6`, quality high, 2k, tỉ lệ 4:3. Lưu 1280×960 và 800×600 WebP.
+
+| File | Nội dung |
+|---|---|
+| `vision.webp` / `vision-800.webp` | Học sinh đeo kính thực tế hỗn hợp ngồi trên bệ neon, chạm vào các khối bài học số dạng hologram – chuyển đổi số trong giáo dục |
+| `mission.webp` / `mission-800.webp` | Cô giáo điều khiển mô hình Toán & Khoa học dạng hologram (nguyên tử, ADN, khối hình học) – dạy tiếng Anh qua môn học |
+
+Prompt `vision`:
+> Cinematic futuristic photograph about the digital transformation of education. A confident 12-year-old Vietnamese student in a white school shirt sits on a floating glowing platform, wearing sleek mixed-reality glasses, reaching out with one hand to touch floating holographic learning panels and glowing wireframe cubes that represent digital lessons. Neon light in electric blue and warm orange, glowing particles and light trails sweeping across the scene, deep dark navy background with depth and bokeh. Dynamic diagonal composition, the student placed on the right third, glowing cubes on the left. Premium, inspiring, high-tech, dramatic rim light. No text, no letters, no logos, no watermark, no readable screens. Natural, anatomically correct hands.
+
+Prompt `mission`:
+> Cinematic futuristic photograph about learning English through Math and Science. A young Vietnamese female teacher in her late twenties in a navy blazer stands on a glowing neon square platform, gesturing with both hands to control floating holographic science and math objects around her: a translucent glass sphere with an atom model, a glowing DNA helix, geometric 3D shapes, a small planet, translucent floating cards. Neon outlines in electric blue and warm orange with a hint of violet, dark navy background, soft reflections on the glossy floor. She is placed slightly right of center, holograms on the left. Premium, inspiring, high-tech, dramatic rim light. No text, no letters, no numbers, no formulas, no logos, no watermark. Natural, anatomically correct hands.
