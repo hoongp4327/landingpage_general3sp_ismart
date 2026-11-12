@@ -700,3 +700,26 @@ html.anim .reveal.is-in .pt-spark--orange { animation-delay: 2.1s; }
 .sec-video::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(255, 255, 255, .35) 0%, rgba(255, 255, 255, .1) 40%, rgba(255, 255, 255, .25) 100%); }
 .section--programs .deco { z-index: 2; }
 @media (prefers-reduced-motion: reduce) { .sec-video__el { display: none; } }
+
+/* =========================================================
+   v11 – TIÊU ĐỀ "VỀ iSMART" DẠNG SVG (Asset 3)
+   ========================================================= */
+.about__title--svg { margin-top: 16px; line-height: 1; }
+.at { display: block; width: 100%; max-width: 620px; height: auto; overflow: visible; }
+.at text { white-space: pre; fill: #020E5F; }
+.at-l1 { font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif; font-size: 67.56px; font-weight: 600; }
+.at-it { font-style: italic; }
+.at-l2 { font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif; font-size: 47.38px; font-weight: 700; }
+.at .at-or { fill: #FF8431; }
+.at .at-bl { fill: #1681FC; }
+.at-hl { fill: #FFF7E9; }
+.at-ring { fill: none; stroke: #FF8431; stroke-width: 1.5px; stroke-miterlimit: 10; }
+.at-spark { fill: #020E5F; transform-box: fill-box; transform-origin: center; }
+/* Khi cuộn tới: vòng elip tự vẽ quanh "15 năm", dải nhấn kéo dài, ngôi sao lấp lánh */
+html.anim.js-reveal .reveal .at-ring { stroke-dasharray: 1; stroke-dashoffset: 1; }
+html.anim.js-reveal .reveal .at-hl { transform: scaleX(0); transform-box: fill-box; transform-origin: left center; }
+html.anim .reveal.is-in .at-ring { animation: ptRing 1.3s var(--ease) .35s forwards; }
+html.anim .reveal.is-in .at-hl { animation: atHl .9s var(--ease) .6s forwards; }
+html.anim .reveal.is-in .at-spark { animation: htSpark 2.8s ease-in-out 1.2s infinite; }
+@keyframes atHl { to { transform: scaleX(1); } }
+@media (prefers-reduced-motion: reduce) { .at-ring { stroke-dasharray: none !important; stroke-dashoffset: 0 !important; } .at-hl { transform: none !important; } }
