@@ -53,16 +53,16 @@ Mọi logo hiện là **khung giữ chỗ** (viền nét đứt, chữ "LOGO …
 
 | File | Kích thước gợi ý | ID trên trang | Vị trí |
 |---|---|---|---|
-| `logo-ismart-white.svg` | SVG, tỉ lệ ~3.3:1 (132×40), **bản trắng** | `#logo-ismart-header` | Header (trên nền navy) |
+| `logo-ismart.webp` (+ `logo-ismart.png` gốc) | **Đã có** – logo iSMART do iSMART cung cấp, đặt trên ô nền trắng ở header | `#logo-ismart-header` | Header |
 | `../img/award-cognia.webp` | **Đã có ảnh thật** – hình ô thành tựu lấy nguyên từ chinese.ismart.edu.vn, 548×406 nền trong suốt | `#logo-cognia` | Thành tựu – thẻ "Kiểm định Cognia, Hoa Kỳ" |
 | `../img/award-sao-khue.webp` | **Đã có ảnh thật** – hình ô thành tựu lấy nguyên từ chinese.ismart.edu.vn, 548×406 nền trong suốt | `#logo-sao-khue` | Thành tựu – thẻ "Danh hiệu Sao Khuê" |
-| `logo-equest.svg` | SVG/PNG ~400×160 | `#logo-equest` | Đối tác – Tổ chức thành viên |
-| `logo-oxford-university-press.svg` | SVG/PNG ~400×160 | `#logo-oxford-university-press` | Đối tác – Đối tác học thuật |
-| `logo-cambridge.svg` | SVG/PNG ~400×160 | `#logo-cambridge` | Đối tác – Đối tác học thuật |
-| `logo-ivy-global-school.svg` | SVG/PNG ~400×160 | `#logo-ivy-global-school` | Đối tác – Trường và tổ chức giáo dục |
-| `logo-phu-xuan-university.svg` | SVG/PNG ~400×160 | `#logo-phu-xuan-university` | Đối tác – Trường và tổ chức giáo dục |
-| `logo-elsa.svg` | SVG/PNG ~400×160 | `#logo-elsa` | Đối tác – Trường và tổ chức giáo dục |
-| `logo-blue-ocean.svg` | SVG/PNG ~400×160 | `#logo-blue-ocean` | Đối tác – Trường và tổ chức giáo dục |
+| `logo-equest.webp` | **Đã có** – lấy từ equest.vn | `#logo-equest` | Đối tác – Tổ chức thành viên |
+| `logo-oxford-university-press.svg` | **Đã có** – ghép từ 2 file logo trên corp.oup.com, đổi màu trắng → xanh Oxford `#002147` | `#logo-oxford-university-press` | Đối tác – Đối tác học thuật |
+| `logo-cambridge.webp` | **Đã có** – logo Cambridge University Press & Assessment từ cambridge.org | `#logo-cambridge` | Đối tác – Đối tác học thuật |
+| `logo-ivy-global-school.webp` | **Đã có** – từ ivyglobalschool.org (đã bỏ phần huy hiệu kiểm định đi kèm) | `#logo-ivy-global-school` | Đối tác – Trường và tổ chức giáo dục |
+| `logo-phu-xuan-university.webp` | **Đã có** – từ pxu.edu.vn | `#logo-phu-xuan-university` | Đối tác – Trường và tổ chức giáo dục |
+| `logo-elsa.svg` | **Đã có** – từ elsaspeak.com | `#logo-elsa` | Đối tác – Trường và tổ chức giáo dục |
+| `logo-blue-ocean.svg` | **CẦN THAY** – chưa xác định được đơn vị "Blue Ocean"; SVG/PNG ~400×160 nền trong suốt | `#logo-blue-ocean` | Đối tác – Trường và tổ chức giáo dục |
 
 ## Gắn Google Tag Manager
 
