@@ -79,7 +79,7 @@ Thay `GTM-XXXXXXX` bằng mã container thật. Trang đã khởi tạo `window.
 |---|---|---|
 | `program_click` | `program`: `ilead` \| `ipass` \| `iglobal` \| `chinese` · `grade`: `lop-N` \| `null` | Bấm nút "Xem chương trình …" |
 | `zalo_click` | `position`: `header` \| `cta` \| `sticky` | Bấm "Nhắn Zalo" |
-| `hotline_click` | `position`: `header` \| `cta` \| `sticky` | Bấm hotline / "Gọi ngay" / "Gọi tư vấn" |
+| `hotline_click` | `position`: `header` \| `cta` \| `sticky` \| `footer` | Bấm hotline / "Gọi ngay" / "Gọi tư vấn" |
 | `copy_phone` | – | Bấm "Sao chép số" |
 
 Cơ chế: phần tử có `data-track="<tên sự kiện>"` (kèm `data-program` hoặc `data-position`), `main.js` có 1 hàm lắng nghe click chung. `position: header` gồm hotline trên header và 2 nút trong menu mobile.

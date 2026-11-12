@@ -896,3 +896,32 @@ html.anim .reveal.is-in .at-spark { animation: htSpark 2.8s ease-in-out 1.2s inf
   .partner-block h3 { min-height: 0; }
   .logo-grid li { padding: 22px 16px 16px; }
 }
+
+/* =========================================================
+   v20 – SECTION CUỐI GỌN LẠI + FOOTER THEO MẪU chinese.ismart.edu.vn
+   ========================================================= */
+.cta { padding-top: 72px; }
+@media (min-width: 1024px) { .cta { padding: 96px 0; } .cta__inner { padding-top: 0; } }
+.cta__merge, .deco--plane2 { display: none !important; }
+/* Hotline: nhỏ lại, cùng cỡ với tiêu đề phụ của trang */
+.hotline-box__number { font-size: clamp(1.75rem, 2.6vw, 2.4rem); line-height: 1.15; letter-spacing: .01em; }
+.hotline-box__label { font-size: 12px; }
+
+/* Footer – mẫu: nền #F8F8F8, tiêu đề cột 13px/700 #FE4823, chữ 13px đen, dòng cách 28px, icon MXH 25px */
+.site-footer { background: #F8F8F8; border-top: 0; color: #000; font-size: 13px; }
+.ft { display: grid; gap: 28px; max-width: 980px; padding-block: 28px 40px; }
+.ft__logo { width: 96px; height: auto; display: block; }
+.ft__company { margin-top: 10px; font-size: 13px; line-height: 1.3; color: #000; }
+.ft__company strong { font-weight: 700; }
+.ft__title { font-size: 13px; font-weight: 700; color: #FE4823; line-height: 17px; }
+.ft__list { margin-top: 12px; display: grid; gap: 11px; }
+.ft__list a { display: inline-flex; align-items: center; gap: 4px; min-height: 17px; font-size: 13px; line-height: 17px; color: #000; font-weight: 400; text-decoration: none; }
+.ft__list a:hover { color: #FE4823; }
+.ft__social { display: flex; gap: 6px; margin-top: 24px; }
+.ft__social a { display: block; width: 26px; height: 26px; transition: transform .2s ease; }
+.ft__social a:hover { transform: translateY(-2px); }
+.ft__social img { width: 100%; height: 100%; }
+.site-footer :focus-visible { outline-color: #FE4823; }
+@media (min-width: 768px) { .ft { grid-template-columns: 1.65fr 1fr 1.45fr 1.2fr; padding-block: 28px 44px; } }
+@media (max-width: 767.98px) { .ft__list a { min-height: 32px; } .ft__social a { width: 36px; height: 36px; } }
+.cta__title .accent { font-size: 1em; }
