@@ -15,6 +15,7 @@ Landing page một link duy nhất để sales gửi qua Zalo / Messenger / SMS 
 /js/main.js            Menu, gợi ý theo lớp (#lop-N), UTM, tracking, sao chép số, fade-up
 /assets/img/           Ảnh WebP tạo bằng Higgsfield (2 kích thước cho srcset) + og-image.jpg
 /assets/logos/         Khung giữ chỗ logo (SVG) – thay bằng logo thật
+/assets/fonts/         Font SVN-Book Antiqua Bold + Bold Italic (WOFF2, đã cắt gọn Latin + tiếng Việt)
 /assets/favicon.svg    Favicon chữ "i" cam trên nền navy
 /netlify.toml          publish = ".", header cache cho /assets/*
 /IMAGES.md             Danh sách ảnh + prompt Higgsfield đã dùng
@@ -111,6 +112,8 @@ https://online.ismart.edu.vn/#lop-1   …   https://online.ismart.edu.vn/#lop-9
 
 ## Ghi chú kỹ thuật
 
-- Font Montserrat (Google Fonts, 400/500/600/700/800, `display=swap`). Chưa có dark mode.
+- Font chính: Montserrat (Google Fonts, `display=swap`). Chưa có dark mode.
+- Font chữ nhấn: **SVN-Book Antiqua Bold / Bold Italic**, nhúng trực tiếp trong `assets/fonts/` (tên dùng trong CSS: `iSMART Antiqua`). Hai file đã được cắt chỉ giữ chữ Latin, tiếng Việt và một số dấu câu, mỗi file ~23 KB. Muốn thêm ký tự khác (ví dụ chữ Hán) thì phải tạo lại file từ font gốc.
+  - **Lưu ý bản quyền:** SVN-Book Antiqua là bản Việt hoá của Book Antiqua (Monotype). Cần xác nhận iSMART có quyền dùng font này trên website trước khi đưa lên mạng.
 - Hiệu ứng fade-up chỉ bật khi JS + IntersectionObserver hoạt động; nếu JS lỗi nội dung vẫn hiển thị đầy đủ. Tôn trọng `prefers-reduced-motion`.
 - Màu chữ theo chương trình trên nền trắng dùng bản đậm hơn cho iLEAD (`#8A5A00`) và iPass (`#0B7F6E`) để đạt tương phản WCAG AA; màu nhận diện gốc vẫn dùng cho viền, thanh lớp, biểu đồ.

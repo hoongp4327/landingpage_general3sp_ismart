@@ -864,3 +864,20 @@ html.anim .reveal.is-in .at-spark { animation: htSpark 2.8s ease-in-out 1.2s inf
 @media (min-width: 760px) { .aw2-grid { grid-template-columns: 1fr 1fr; gap: 30px 32px; } }
 @media (prefers-reduced-motion: reduce) { .aw2:hover { transform: none; } }
 @media (min-width: 1024px) { #thanh-tuu { padding: 88px 0; } #thanh-tuu .section-head { margin-bottom: 36px; } }
+
+/* =========================================================
+   v17 – NHÚNG FONT SVN-Book Antiqua (Bold + Bold Italic)
+   File đã cắt gọn còn chữ Latin + tiếng Việt, định dạng WOFF2 (~23 KB/file).
+   ========================================================= */
+@font-face {
+  font-family: 'iSMART Antiqua';
+  src: url('../assets/fonts/svn-book-antiqua-bold-italic.woff2') format('woff2');
+  font-weight: 700; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'iSMART Antiqua';
+  src: url('../assets/fonts/svn-book-antiqua-bold.woff2') format('woff2');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+:root { --serif: 'iSMART Antiqua', 'SVN-Book Antiqua', Georgia, 'Times New Roman', serif; }
+.ht-serif, .pt-serif { font-family: var(--serif); }
