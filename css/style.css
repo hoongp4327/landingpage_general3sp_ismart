@@ -797,3 +797,41 @@ html.anim .reveal.is-in .at-spark { animation: htSpark 2.8s ease-in-out 1.2s inf
   .vm-card--text { padding: 34px 44px; }
   .vm-card--img { min-height: 260px; }
 }
+
+/* =========================================================
+   v15 – LEADS & THÀNH TỰU TRÌNH BÀY LẠI
+   Thang chữ theo chuẩn trang: tiêu đề thẻ 22–24px/800, chữ thẻ 15px/400,
+   chữ nhấn Playfair Display nghiêng (thay Caveat – lỗi dấu tiếng Việt)
+   ========================================================= */
+:root { --hand: var(--serif); }
+
+/* ---------- LEADS ---------- */
+.lv-grid { display: grid; gap: 16px; }
+.lv-card { position: relative; display: flex; flex-direction: column; padding: 26px 24px 28px; background: #fff; border-radius: 20px; box-shadow: 0 10px 30px rgba(11, 29, 77, .08); overflow: hidden; transition: transform .35s var(--ease), box-shadow .35s ease; transition-delay: 0s; }
+.lv-card::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: var(--c); transform: scaleX(.18); transform-origin: left; transition: transform .45s var(--ease); }
+.lv-card__letter { display: grid; place-items: center; width: 72px; height: 72px; border-radius: 20px; background: var(--c); color: #fff; font-size: 40px; line-height: 1; font-weight: 800; box-shadow: 0 10px 22px color-mix(in srgb, var(--c) 35%, transparent); transition: transform .45s var(--ease); }
+.lv-card__name { margin-top: 20px; display: flex; flex-direction: column; gap: 2px; }
+.lv-card__en { font-size: 15px; font-weight: 800; letter-spacing: .1em; color: var(--navy-900); }
+.lv-card__vi { font-family: var(--serif); font-style: italic; font-weight: 600; font-size: 22px; line-height: 1.3; color: var(--c-ink); }
+.lv-card__text { margin-top: 10px; font-size: 15px; line-height: 1.6; color: var(--ink-soft); }
+.lv-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(11, 29, 77, .14); }
+.lv-card:hover::after { transform: scaleX(1); }
+.lv-card:hover .lv-card__letter { transform: rotate(-8deg) scale(1.06); }
+.js-reveal .lv-card.reveal, .js-reveal .aw-card.reveal { transition-delay: var(--d, 0ms); }
+@media (min-width: 700px) and (max-width: 1099px) { .lv-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1100px) { .lv-grid { grid-template-columns: repeat(5, 1fr); gap: 18px; } }
+
+/* ---------- THÀNH TỰU ---------- */
+.section--navy .section-head { margin-bottom: 44px; }
+.aw-grid { display: grid; gap: 18px; counter-reset: none; }
+.aw-card { position: relative; display: flex; flex-direction: column; padding: 26px 24px 28px; border-radius: 20px; background: linear-gradient(170deg, rgba(255, 255, 255, .09), rgba(255, 255, 255, .03)); border: 1px solid rgba(255, 255, 255, .14); transition: transform .35s var(--ease), background-color .35s ease, border-color .35s ease, box-shadow .35s ease; }
+.aw-card__no { font-family: var(--serif); font-style: italic; font-weight: 800; font-size: 28px; line-height: 1; color: var(--accent); }
+.aw-card__visual { display: grid; place-items: center; height: 150px; margin: 8px 0 18px; border-radius: 16px; background: radial-gradient(circle at 50% 60%, rgba(245, 160, 74, .22), transparent 65%); }
+.aw-card__img { width: auto; height: 132px; max-width: 80%; object-fit: contain; filter: drop-shadow(0 14px 18px rgba(0, 0, 0, .35)); transition: transform .5s var(--ease); }
+.aw-card__title { font-size: 22px; line-height: 1.3; font-weight: 800; color: #fff; }
+.aw-card__text { margin-top: 8px; font-size: 15px; line-height: 1.6; color: rgba(255, 255, 255, .78); }
+.aw-card:hover { transform: translateY(-6px); border-color: rgba(245, 160, 74, .55); box-shadow: 0 22px 44px rgba(0, 0, 0, .3); }
+.aw-card:hover .aw-card__img { transform: translateY(-6px) rotate(-4deg) scale(1.05); }
+@media (min-width: 700px) and (max-width: 1099px) { .aw-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1100px) { .aw-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; } }
+@media (prefers-reduced-motion: reduce) { .lv-card:hover, .aw-card:hover { transform: none; } }
