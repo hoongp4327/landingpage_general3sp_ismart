@@ -62,7 +62,7 @@ Mọi logo hiện là **khung giữ chỗ** (viền nét đứt, chữ "LOGO …
 | `logo-ivy-global-school.webp` | **Đã có** – từ ivyglobalschool.org (đã bỏ phần huy hiệu kiểm định đi kèm) | `#logo-ivy-global-school` | Đối tác – Trường và tổ chức giáo dục |
 | `logo-phu-xuan-university.webp` | **Đã có** – từ pxu.edu.vn | `#logo-phu-xuan-university` | Đối tác – Trường và tổ chức giáo dục |
 | `logo-elsa.svg` | **Đã có** – từ elsaspeak.com | `#logo-elsa` | Đối tác – Trường và tổ chức giáo dục |
-| `logo-blue-ocean.svg` | **CẦN THAY** – chưa xác định được đơn vị "Blue Ocean"; SVG/PNG ~400×160 nền trong suốt | `#logo-blue-ocean` | Đối tác – Trường và tổ chức giáo dục |
+| `logo-blue-ocean.svg` | **Đã có** – từ blueocean.net.vn | `#logo-blue-ocean` | Đối tác – Trường và tổ chức giáo dục |
 
 ## Gắn Google Tag Manager
 
