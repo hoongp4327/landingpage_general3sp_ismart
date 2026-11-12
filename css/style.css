@@ -723,3 +723,18 @@ html.anim .reveal.is-in .at-hl { animation: atHl .9s var(--ease) .6s forwards; }
 html.anim .reveal.is-in .at-spark { animation: htSpark 2.8s ease-in-out 1.2s infinite; }
 @keyframes atHl { to { transform: scaleX(1); } }
 @media (prefers-reduced-motion: reduce) { .at-ring { stroke-dasharray: none !important; stroke-dashoffset: 0 !important; } .at-hl { transform: none !important; } }
+
+/* v12 – Về iSMART: tiêu đề to hơn 15%, 1 ảnh minh họa trong suốt thay cụm 3 ảnh */
+.at { max-width: 713px; }
+.about__visual { aspect-ratio: auto; max-width: 640px; }
+.about__img { width: 100%; height: auto; filter: drop-shadow(0 24px 34px rgba(11, 29, 77, .16)); }
+@media (min-width: 1024px) {
+  .about { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .about__visual { max-width: none; width: 112%; margin-right: -6%; }
+}
+/* Cột chữ đủ rộng cho tiêu đề 713px; ảnh lấn nhẹ sang trái (mép ảnh trong suốt) */
+@media (min-width: 1024px) {
+  .about { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 32px; }
+  .about__copy { position: relative; z-index: 2; }
+  .about__visual { width: calc(100% + 110px); margin: 0 -24px 0 -86px; }
+}
