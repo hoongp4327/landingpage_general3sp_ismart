@@ -53,8 +53,8 @@ Mọi logo hiện là **khung giữ chỗ** (viền nét đứt, chữ "LOGO …
 | File | Kích thước gợi ý | ID trên trang | Vị trí |
 |---|---|---|---|
 | `logo-ismart-white.svg` | SVG, tỉ lệ ~3.3:1 (132×40), **bản trắng** | `#logo-ismart-header` | Header (trên nền navy) |
-| `logo-cognia.webp` | **Đã có ảnh thật** (dấu Accredited, lấy từ chinese.ismart.edu.vn), 226×271 nền trong suốt | `#logo-cognia` | Thành tựu – thẻ "Kiểm định Cognia, Hoa Kỳ" |
-| `logo-sao-khue.webp` | **Đã có ảnh thật** (cúp Sao Khuê, lấy từ chinese.ismart.edu.vn), 128×324 nền trong suốt | `#logo-sao-khue` | Thành tựu – thẻ "Danh hiệu Sao Khuê" |
+| `../img/award-cognia.webp` | **Đã có ảnh thật** – hình ô thành tựu lấy nguyên từ chinese.ismart.edu.vn, 548×406 nền trong suốt | `#logo-cognia` | Thành tựu – thẻ "Kiểm định Cognia, Hoa Kỳ" |
+| `../img/award-sao-khue.webp` | **Đã có ảnh thật** – hình ô thành tựu lấy nguyên từ chinese.ismart.edu.vn, 548×406 nền trong suốt | `#logo-sao-khue` | Thành tựu – thẻ "Danh hiệu Sao Khuê" |
 | `logo-equest.svg` | SVG/PNG ~400×160 | `#logo-equest` | Đối tác – Tổ chức thành viên |
 | `logo-oxford-university-press.svg` | SVG/PNG ~400×160 | `#logo-oxford-university-press` | Đối tác – Đối tác học thuật |
 | `logo-cambridge.svg` | SVG/PNG ~400×160 | `#logo-cambridge` | Đối tác – Đối tác học thuật |

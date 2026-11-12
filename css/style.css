@@ -835,3 +835,32 @@ html.anim .reveal.is-in .at-spark { animation: htSpark 2.8s ease-in-out 1.2s inf
 @media (min-width: 700px) and (max-width: 1099px) { .aw-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1100px) { .aw-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; } }
 @media (prefers-reduced-motion: reduce) { .lv-card:hover, .aw-card:hover { transform: none; } }
+
+/* =========================================================
+   v16 – FONT CHỮ NHẤN: SVN-Book Antiqua Bold Italic
+   (máy có font này sẽ hiện đúng; máy khác dùng Lora Bold Italic – Google Fonts, có tiếng Việt)
+   ========================================================= */
+:root { --serif: 'SVN-Book Antiqua', 'Lora', 'Palatino Linotype', Georgia, serif; --hand: var(--serif); }
+.hero__title .accent, .cta__title .accent, .section-title em, .about__title em,
+.prog-card__slogan, .about__motto, .vm-card__statement, .award__no, .aw-card__no, .lv-card__vi {
+  font-family: var(--serif); font-style: italic; font-weight: 700; }
+.ht-serif, .pt-serif { font-family: var(--serif); font-weight: 700; }
+
+/* =========================================================
+   v16 – Ô THÀNH TỰU THEO MẪU chinese.ismart.edu.vn
+   Mẫu: ô 369×241, bo 30px, nền #F1F3F4, năm 36px/700 #183EC2,
+   hình 300×222 neo góc trên phải, chữ 13px/1.6, từ khoá đậm #183EC2.
+   Ở đây phóng ~1,3 lần, giữ nguyên tỉ lệ.
+   ========================================================= */
+.aw2-grid { display: grid; gap: 24px; max-width: 1000px; margin: 0 auto; }
+.aw2 { position: relative; aspect-ratio: 369 / 241; min-height: 260px; border-radius: 30px; background: #F1F3F4; overflow: hidden; color: #000; transition: transform .35s var(--ease), box-shadow .35s ease; }
+.aw2__img { position: absolute; top: 0; right: 0; width: 81.3%; height: 92.1%; object-fit: cover; object-position: left top; pointer-events: none; transition: transform .6s var(--ease); transform-origin: right top; }
+.aw2__year { position: absolute; left: 0; top: 5%; width: 42%; text-align: center; font-size: clamp(36px, 3.4vw, 47px); line-height: 1.3; font-weight: 700; color: #183EC2; }
+.aw2__text { position: absolute; left: 9.2%; top: 57.3%; width: 72%; font-size: clamp(14px, 1.25vw, 17px); line-height: 1.6; font-weight: 400; color: #000; }
+.aw2__text strong { font-weight: 700; color: #183EC2; }
+.aw2:hover { transform: translateY(-6px); box-shadow: 0 22px 44px rgba(0, 0, 0, .28); }
+.aw2:hover .aw2__img { transform: scale(1.04); }
+.js-reveal .aw2.reveal { transition-delay: var(--d, 0ms); }
+@media (min-width: 760px) { .aw2-grid { grid-template-columns: 1fr 1fr; gap: 30px 32px; } }
+@media (prefers-reduced-motion: reduce) { .aw2:hover { transform: none; } }
+@media (min-width: 1024px) { #thanh-tuu { padding: 88px 0; } #thanh-tuu .section-head { margin-bottom: 36px; } }
