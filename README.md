@@ -12,7 +12,7 @@ Landing page một link duy nhất để sales gửi qua Zalo / Messenger / SMS 
 ```
 /index.html            Toàn bộ nội dung trang
 /css/style.css         Giao diện (mobile-first, breakpoint 480 / 768 / 900 / 1024 / 1100)
-/js/main.js            Menu, gợi ý theo lớp (#lop-N), UTM, tracking, sao chép số, fade-up
+/js/main.js            Menu, gợi ý theo lớp (#lop-N), mã đại sứ ?ref=, tracking, sao chép số, fade-up
 /assets/img/           Ảnh WebP tạo bằng Higgsfield (2 kích thước cho srcset) + og-image.jpg
 /assets/logos/         Khung giữ chỗ logo (SVG) – thay bằng logo thật
 /assets/fonts/         Font SVN-Book Antiqua Bold + Bold Italic (WOFF2, đã cắt gọn Latin + tiếng Việt)
@@ -82,19 +82,29 @@ Thay `GTM-XXXXXXX` bằng mã container thật. Trang đã khởi tạo `window.
 | `hotline_click` | `position`: `header` \| `cta` \| `sticky` \| `footer` | Bấm hotline / "Gọi ngay" / "Gọi tư vấn" |
 | `copy_phone` | – | Bấm "Sao chép số" |
 
+Mọi sự kiện có thêm `ref`: mã đại sứ đang áp dụng (xem mục bên dưới) hoặc `null`.
+
 Cơ chế: phần tử có `data-track="<tên sự kiện>"` (kèm `data-program` hoặc `data-position`), `main.js` có 1 hàm lắng nghe click chung. `position: header` gồm hotline trên header và 2 nút trong menu mobile.
 
-## UTM tự động
+## Mã giới thiệu đại sứ KOL/KOC (`?ref=`)
 
-Mọi link sang 4 website chương trình được gắn:
+Trang không gắn UTM nữa. Thay vào đó, mã đại sứ trên link được chuyển tiếp sang 4 website chương trình, để form đăng ký ở đó ghi lead cho đúng đại sứ:
 
 ```
-?utm_source=online-hub&utm_medium=landing&utm_campaign=4-chuong-trinh&utm_content=<ilead|ipass|iglobal|chinese>
+https://<trang-chung>/?ref=kol008
+  → bấm iLEAD → https://ileadonline.ismart.edu.vn/?ref=kol008
+  → bấm iPass → https://ipass.ismart.edu.vn/?ref=kol008   (tương tự iGlobal, Tiếng Trung)
 ```
 
-- Trang đang mở có `#lop-N` → thêm `&utm_term=lop-N`.
-- Link trang chung đã có `utm_*` từ sales (ví dụ `?utm_source=zalo&utm_medium=sales`) → **giữ `utm_source` / `utm_medium` gốc** và chuyển tiếp sang link đích; `utm_campaign`, `utm_id`, `utm_term` của sales (nếu có) cũng được chuyển tiếp. `utm_content` luôn là mã chương trình.
-- Khi JS tắt, link vẫn hoạt động (không có UTM).
+- Áp dụng cho mọi link sang 4 chương trình: nút trên panel và danh sách "Khóa học" ở footer.
+- **Cùng luật với form trang iGlobal – giữ mã đầu tiên, không hết hạn.** Mã đầu tiên được lưu trên trình duyệt (localStorage `ismartReferralCode`, cùng tên khoá với iGlobal). Phụ huynh mở lại trang chung không có `?ref`, hoặc bằng link của đại sứ khác, vẫn được tính cho đại sứ đầu tiên. Muốn thử lại từ đầu thì xoá dữ liệu trang trong trình duyệt.
+- Mã được đổi về chữ thường; chỉ nhận `a-z`, `0-9`, `-`, `_`, dài 2–40 ký tự; mã sai định dạng bị bỏ qua.
+- Các trang chương trình khác (iLEAD, iPass, Tiếng Trung) nên dùng đúng luật này để lead được tính thống nhất.
+- Không có mã → link đích để trơn, không thêm gì.
+- Kết hợp được với lớp: `https://<trang-chung>/?ref=kol008#lop-4`
+- Mỗi sự kiện dataLayer có thêm trường `ref` (mã đại sứ hoặc `null`).
+- Khi JS tắt, link vẫn mở được nhưng không mang mã.
+- Website đích phải tự đọc `?ref` và ghi vào lead (iLEAD đã làm được theo dạng `?ref=kol008`).
 
 ## Link theo lớp `#lop-N`
 
@@ -108,7 +118,7 @@ https://online.ismart.edu.vn/#lop-1   …   https://online.ismart.edu.vn/#lop-9
 - Thẻ hợp lớp được viền màu + nhãn "Phù hợp lớp N"; thẻ còn lại mờ đi (vẫn bấm được).
 - Khoảng lớp lấy từ `data-grade-from` / `data-grade-to` trên mỗi thẻ `.prog-card` (không hard-code trong JS):
   lớp 1–2 → iLEAD · lớp 3–5 → iLEAD, iPass · lớp 6–9 → iPass, iGlobal, Tiếng Trung.
-- Kết hợp được với UTM: `https://online.ismart.edu.vn/?utm_source=zalo&utm_medium=sales#lop-4`
+- Kết hợp được với mã đại sứ: `https://online.ismart.edu.vn/?ref=kol008#lop-4`
 
 ## Ghi chú kỹ thuật
 

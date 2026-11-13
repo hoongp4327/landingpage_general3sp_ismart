@@ -121,7 +121,7 @@
     ln.addEventListener('click', function (e) {
       var card = doc.getElementById('card-' + ln.getAttribute('data-line'));
       if (!card) return;
-      // Tự cuộn thay vì đổi hash, để không làm mất lớp đang chọn (#lop-N) và utm_term
+      // Tự cuộn thay vì đổi hash, để không làm mất lớp đang chọn (#lop-N)
       e.preventDefault();
       setActive(card);
       (section || card).scrollIntoView({ behavior: reducedMotion() ? 'auto' : 'smooth', block: 'start' });
@@ -176,7 +176,13 @@
     clearBtn.addEventListener('click', clearGrade);
   }
 
-  /* ---------- 4. UTM cho link sang 4 website chương trình ---------- */
+  /* ---------- 4. Mã giới thiệu đại sứ (?ref=kol008) cho link sang 4 website chương trình ----------
+     - Trang mở bằng ?ref=<mã> → gắn đúng ?ref=<mã> vào link 4 chương trình (header, panel, footer).
+     - Cùng luật với form trên các trang chương trình (iGlobal): GIỮ MÃ ĐẦU TIÊN, KHÔNG HẾT HẠN.
+       Trình duyệt đã lưu mã hợp lệ thì link có ?ref khác cũng không thay được.
+     - Mã đổi về chữ thường, chỉ nhận a-z, 0-9, "-", "_", dài 2–40 ký tự; sai định dạng thì bỏ qua. */
+  var REF_KEY = 'ismartReferralCode';
+  var REF_RE = /^[a-z0-9_-]{2,40}$/;
   var programLinks = $$('a[data-track="program_click"][data-program]');
   programLinks.forEach(function (a) { a.setAttribute('data-base-href', a.getAttribute('href')); });
 
@@ -196,25 +202,27 @@
     return out;
   }
 
-  function updateProgramLinks() {
-    var page = pageParams();
-    var grade = currentGrade();
-    programLinks.forEach(function (a) {
-      var params = {
-        utm_source: page.utm_source || 'online-hub',
-        utm_medium: page.utm_medium || 'landing',
-        utm_campaign: page.utm_campaign || '4-chuong-trinh',
-        utm_content: a.getAttribute('data-program')
-      };
-      if (grade !== null) params.utm_term = 'lop-' + grade;
-      else if (page.utm_term) params.utm_term = page.utm_term;
-      if (page.utm_id) params.utm_id = page.utm_id;
+  function currentRef() {
+    var incoming = (pageParams().ref || '').trim().toLowerCase();
+    try {
+      var saved = (localStorage.getItem(REF_KEY) || '').trim().toLowerCase();
+      if (!REF_RE.test(saved) && REF_RE.test(incoming)) {
+        localStorage.setItem(REF_KEY, incoming);
+        saved = incoming;
+      }
+      return REF_RE.test(saved) ? saved : null;
+    } catch (err) {
+      // Trình duyệt chặn lưu trữ: chỉ dùng mã trên link hiện tại
+      return REF_RE.test(incoming) ? incoming : null;
+    }
+  }
 
+  var activeRef = currentRef();
+
+  function updateProgramLinks() {
+    programLinks.forEach(function (a) {
       var base = a.getAttribute('data-base-href');
-      var qs = Object.keys(params).map(function (k) {
-        return encodeURIComponent(k) + '=' + encodeURIComponent(params[k]);
-      }).join('&');
-      a.setAttribute('href', base + (base.indexOf('?') < 0 ? '?' : '&') + qs);
+      a.setAttribute('href', activeRef ? base + (base.indexOf('?') < 0 ? '?' : '&') + 'ref=' + encodeURIComponent(activeRef) : base);
     });
   }
 
@@ -223,7 +231,7 @@
     var el = e.target.closest ? e.target.closest('[data-track]') : null;
     if (!el) return;
     var name = el.getAttribute('data-track');
-    var payload = { event: name };
+    var payload = { event: name, ref: activeRef };
     if (name === 'program_click') {
       var g = currentGrade();
       payload.program = el.getAttribute('data-program');
